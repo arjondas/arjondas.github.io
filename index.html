@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='theme-color' content='#000000' />
+    <link href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='styles.css'>
+    <title>Arjon Das</title>
+  </head>
+  <body>
+    <div class='App'>
+      <div class='ContentBox'>
+
+        
+        <div class='Profile'>
+          <div class='Title'>
+            <img src='images/portrait.jpg' class='ProfilePic'/>
+            <h1>Arjon Das</h1>
+          </div>
+          <div class='ProfileDoc'>
+            <p>
+              I am a freelance programmer and Deep-learning practitioner. 
+              I was a Fullstack Software Engineer at <a href='https://bibidho.com.bd' target='_blank'>Bibidho</a>, where I worked 
+              at the intersection of engineering, e-commerce, customer experience. <br/><br/>
+              Some of my notable works at Bibidho were on the site's content management system(CMS), 
+              customer behavior logger, administrative access control system, etc.
+              I did an internship at Bangladesh Telecommunications Company Ltd (<a href='http://btcl.com.bd' target='_blank'>BTCL</a>).
+              I completed my bachelor's in Computer Science and Engineering at the 
+              Chittagong University of Engineering and Technology. There I worked 
+              on IoT Based Smart Food Monitoring System under the supervision of 
+              <a href='https://scholar.google.com/citations?user=srYxYhcAAAAJ&hl=en&oi=ao' target='_blank'>Dr. M. Moshiul Hoque</a>.
+            </p>
+            <div>
+              <a href='mailto:arjondas@gmail.com'>Email</a>
+              <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+              <a href='docs/arjon_das_cv.pdf'>CV</a>
+              <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+              <a href='https://github.com/arjondas'>Github</a>
+              <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+              <a href='https://twitter.com/arjondas'>Twitter</a>
+            </div>
+          </div>
+        </div>
+
+        <div class='proj-title'>
+          <h2>Projects</h2>
+          <p>
+            I'm interested in Deep Learning, Meta-Learning, Machine Learning on Edge and Attention Mechanism. Deep Learning has become so data-oriented, as well as the models consisting of so many parameters nowadays that it's not feasible for an individual to utilize most of these modern implementations. This situations have instilled my interest for <strong>learning to learn</strong>.
+          </p>
+        </div>
+
+        <div class='proj-card'>
+          <img
+            class='proj-pic'
+            src='images/simple_sentiment.png'
+          >
+          <div class='proj-doc'>
+            <h3>Simple Sentiment &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>PyTorch&nbsp; | &nbsp;Flask</span></h3>
+            <p>
+              Simple Sentiment is a DistilBERT based classifier that can recognize positive and negative vibes from sentences. It was trained using the <a href="https://www.kaggle.com/kazanova/sentiment140" target="_blank">Sentiment140</a> Dataset comprising of 1.6 Million tweets labeled positive or negative.
+            </p>
+            <div>
+              <a href='https://simple-sentiment.herokuapp.com'>Project Website</a>
+              <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+              <a href='https://drive.google.com/drive/folders/1A-uw-sXyGpzZy__cVYMfIdtnkUyvCuuv'>Fine tuned Model</a>
+              <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+              <a href='https://github.com/arjondas/sentiment-analysis'>Code</a>
+            </div>
+          </div>
+        </div>
+        <div class='proj-card'>
+          <img
+            class='proj-pic'
+            src='images/simple_mann.png'
+          >
+          <div class='proj-doc'>
+            <h3>Simple MANN (using LSTM) &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>TensorFlow</span></h3>
+            <p>
+              Simple MANN is a meta-learning implementation inspired by the paper <strong>Optimization as a Model for Few-Shot Learning</strong>. Even though the name suggests MANN(Memory Augmented Neural Networks), instead of NTM this implementation uses a single layer LSTM as memory unit. The model is evaluated on the Omniglot Dataset.
+            </p>
+            <div>
+              <a href='https://github.com/arjondas/simple-mann'>Details + Code</a>
+            </div>
+          </div>
+        </div>
+        <div class='proj-card'>
+          <div class='meme'>
+            Hateful Meme Detection
+          </div>
+          <div class='proj-doc'>
+            <h3>Facebook Hateful Meme Challenge &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>PyTorch &nbsp; | &nbsp;MMF</span></h3>
+            <p>
+              Submission for <a href='https://www.drivendata.org/competitions/64/hateful-memes/' target='_blank'>Facebook Hateful Meme Challenge</a> at DrivenData using VisualBERT. The model scored <strong>0.7214(AUC-ROC)</strong> without ensemble and task specific pre-training. Model's MMF configuration is given below.
+            </p>
+            <div>
+              <a href='docs/hm_visual_bert.yaml'>Config</a>
+            </div>
+          </div>
+        </div>
+        <div class='proj-card'>
+          <img
+            class='proj-pic'
+            src='images/stckscrpr.png'
+          >
+          <div class='proj-doc'>
+            <h3>Stock Scraper &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>MongoDB&nbsp; | &nbsp;Express&nbsp; | &nbsp;React.js&nbsp; | &nbsp;Node.js</span></h3>
+            <p>
+              Stock Scraper is a tweet scraping server that counts number of times any stock has been tweeted by targeted users at <a href='https://stocktwits.com' target='_blank'>Stocktwits</a> and visualizes the data. This project is a excellent groundwork for analyzing and extracting values from social investment platforms.
+            </p>
+            <div>
+              <a href='https://stckscrpr.herokuapp.com'>Project Website</a>
+            </div>
+          </div>
+        </div>
+        <div class='proj-card'>
+          <div class='proj-pic'
+            style='display: flex; justify-content: center; align-items: center; border: 1px solid rgba(0, 0, 0, 0.5); border-radius: 5px; height: 110px;'
+          >
+            <code>implementations</code>
+          </div>
+          <div class='proj-doc'>
+            <h3>Code reproduction of various papers &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>PyTorch</span></h3>
+            <p>
+              Code reproducibility of papers is becoming more and more challenging as models are becoming more complex and abstract. Here are some of my practice attempts to reproduce models from papers with help from various online forums using popular machine learning frameworks.
+            </p>
+            <div>
+              <a href='https://github.com/arjondas/implementations'>Code</a>
+            </div>
+          </div>
+        </div>
+        <div class='proj-card'>
+          <img
+            class='proj-pic'
+            src='images/sfms.png'
+          >
+          <div class='proj-doc'>
+            <h3>IoT Based Smart Food Monitoring System &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'><br/>Raspberry Pi&nbsp; | &nbsp;Swift&nbsp; | &nbsp;Python&nbsp; | &nbsp;MongoDB&nbsp; | &nbsp;Express&nbsp; | &nbsp;Node.js</span></h3>
+            <p>
+              The project facilitates food monitoring of refrigerators and food cold storage systems using mobile devices, with high scalability. The system is developed using Raspberry Pi device and transformed into a small form factor IoT device. One of the pros is it's ability to scale up which can facilitate large scale cold storage monitoring.
+            </p>
+            <div>
+              <a href='docs/IoT_Based_Smart_Food_Monitoring_System Final.pdf'>Thesis</a>
+              <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+              <a href='https://github.com/arjondas/sfms'>Code</a>
+            </div>
+          </div>
+        </div>
+        <div class='proj-card'>
+          <img
+            class='proj-pic'
+            src='images/job_engine.png'
+          >
+          <div class='proj-doc'>
+            <h3>Online Job Market (Job Engine) &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>React.js&nbsp; | &nbsp;Javascript</span></h3>
+            <p>
+              Job Engine is a single page web app for searching and posting jobs online. The browser based app’s front end is implemented using Javascript, React.js and server intergration using REST API.
+            </p>
+            <div>
+              <a href='https://github.com/arjondas/jobengine'>Code</a>
+            </div>
+          </div>
+        </div>
+        <div class='proj-card'>
+          <img
+            class='proj-pic'
+            src='images/easyride_mapping.jpg'
+          >
+          <div class='proj-doc'>
+            <h3>Car Rental System (EasyRide) &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>Javascript&nbsp; | &nbsp;PHP&nbsp; | &nbsp;HTML</span></h3>
+            <p>
+              Easyride is a database project for renting cars in a particular area, facilitating CRUD functions to the end-user. The project is implemented using PHP, HTML, CSS, MySQL, Javascript.
+            </p>
+            <div>
+              <a href='https://github.com/arjondas/easyride'>Details + Code</a>
+            </div>
+          </div>
+        </div>
+        <div class='proj-card'>
+          <img
+            class='proj-pic'
+            src='images/direct2d.png'
+            style='padding: 30px; border-radius: 50px;'
+          >
+          <div class='proj-doc'>
+            <h3>Direct 2D &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>Swift</span></h3>
+            <p>
+              Direct 2D is a self initiated game development project. The game was implemented using Swift with basic physics written from scratch. The app was available on Apple AppStore from July 2017 to July 2018 with over 2.6K downloads.
+            </p>
+            <div>
+              <a href='https://github.com/arjondas/direct'>Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
