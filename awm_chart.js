@@ -42,14 +42,31 @@ var CustomToolTip = function CustomToolTip(_ref) {
   return null;
 };
 
-var AIWM_CHART = function AIWM_CHART(props) {
+var renderLegendText = function renderLegendText(value, entry) {
+  var color = entry.color;
+
+  return React.createElement(
+    'span',
+    {
+      style: Object.assign({}, color) },
+    'Accuracy of Similarity Detection between original and noisy extracted audio'
+  );
+};
+
+var AWM_CHART = function AWM_CHART(props) {
   return React.createElement(
     'div',
     { className: 'Chart-Container' },
     React.createElement(
       'div',
       { className: 'Chart-Label' },
-      'Salt-n-Pepper Noisy Marked Extraction vs AWM Siamese Network\'s Similarity Detection Accuracy'
+      'Please ',
+      React.createElement(
+        'strong',
+        { style: { color: 'orange' } },
+        'hover mouse'
+      ),
+      ' on graph to see the AWM\'s audio extraction w.r.t. added noise'
     ),
     React.createElement(
       Recharts.ResponsiveContainer,
@@ -57,11 +74,9 @@ var AIWM_CHART = function AIWM_CHART(props) {
       React.createElement(
         Recharts.LineChart,
         {
-          width: 500,
-          height: 300,
           data: data,
           margin: {
-            top: 5,
+            top: 0,
             right: 10,
             left: 0,
             bottom: 5
@@ -71,17 +86,28 @@ var AIWM_CHART = function AIWM_CHART(props) {
           strokeDasharray: '3 3',
           stroke: 'rgba(70, 70, 70, 1)'
         }),
-        React.createElement(
-          Recharts.XAxis,
-          { dataKey: 'noise' },
-          React.createElement(Recharts.Label, { value: 'Noise Percentage', offset: 0, position: 'insideBottom' })
-        ),
+        React.createElement(Recharts.XAxis, {
+          dataKey: 'noise',
+          label: {
+            value: 'Salt-n-Pepper Noise added per Test Evaluation (%)',
+            fill: 'white',
+            position: 'insideBottom',
+            offset: 1,
+            fontSize: 10
+          }
+        }),
         React.createElement(Recharts.YAxis, {
           type: 'number',
-          domain: ['auto', 'auto']
+          domain: ['auto', 'auto'],
+          label: {
+            value: 'Accuracy of Similarity Detection (%)',
+            fill: 'white',
+            offset: 1,
+            angle: -90,
+            fontSize: 10
+          }
         }),
         React.createElement(Recharts.Tooltip, {
-          // offset={15}
           cursor: {
             fill: toneMid,
             stroke: toneLighter,
@@ -97,11 +123,19 @@ var AIWM_CHART = function AIWM_CHART(props) {
           isAnimationActive: false,
           content: React.createElement(CustomToolTip, null)
         }),
-        React.createElement(Recharts.Line, { type: 'monotone', dataKey: 'accuracy', stroke: 'orange', activeDot: { r: 0 } })
+        React.createElement(Recharts.Legend, {
+          align: 'right',
+          verticalAlign: 'top',
+          wrapperStyle: {
+            top: 20
+          },
+          formatter: renderLegendText
+        }),
+        React.createElement(Recharts.Line, { type: 'monotone', dataKey: 'accuracy', stroke: 'orange', activeDot: { r: 8 } })
       )
     )
   );
 };
 
-var domContainer = document.querySelector('#aiwm_chart_container');
-ReactDOM.render(React.createElement(AIWM_CHART, null), domContainer);
+var domContainer = document.querySelector('#awm_chart_container');
+ReactDOM.render(React.createElement(AWM_CHART, null), domContainer);
