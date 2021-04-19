@@ -6,6 +6,7 @@
     <meta name='theme-color' content='#000000' />
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='styles.css'>
+    <link rel='stylesheet' href='charts.css'>
     <title>Arjon Das</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180948350-1"></script>
@@ -13,7 +14,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-180948350-1');
     </script>
   </head>
@@ -24,37 +24,61 @@
           <div class='Title'>
             <img src='images/portrait.jpg' class='ProfilePic'/>
             <h1>Arjon Das</h1>
-          </div>
-          <div class='ProfileDoc'>
-            <p>
-              I am a freelance programmer and Deep-learning practitioner. 
-              I worked on <a href='https://bibidho.com.bd' target='_blank'>Bibidho</a> as a Fullstack Software Engineer, 
-              at the intersection of engineering, e-commerce, customer experience. <br/><br/>
-              Some of my notable works on Bibidho were the site's content management system(CMS), 
-              customer behavior logger, administrative access control system, etc.
-              I did an internship at Bangladesh Telecommunications Company Ltd (<a href='http://btcl.com.bd' target='_blank'>BTCL</a>).
-              I completed my bachelor's in Computer Science and Engineering at the 
-              Chittagong University of Engineering and Technology. There I worked 
-              on IoT Based Smart Food Monitoring System under the supervision of 
-              <a href='https://scholar.google.com/citations?user=srYxYhcAAAAJ&hl=en&oi=ao' target='_blank'>Dr. M. Moshiul Hoque</a>.
-            </p>
-            <div>
+            <p style="margin-bottom: 0; margin-left: 20px;">
               <a href='mailto:arjondas@gmail.com'>Email</a>
-              <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-              <a href='docs/arjon_das_cv.pdf'>CV</a>
+              <!-- <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+              <a href='docs/arjon_das_cv.pdf'>CV</a> -->
               <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
               <a href='https://github.com/arjondas'>Github</a>
               <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
               <a href='https://twitter.com/arjondas'>Twitter</a>
-            </div>
+            </p>
+          </div>
+          <div class='ProfileDoc'>
+            <p>
+              I am a freelance programmer and Deep-learning practitioner.
+              I completed my bachelor's in Computer Science and Engineering at the 
+              Chittagong University of Engineering and Technology. There I worked 
+              on IoT Based Smart Food Monitoring System under the supervision of 
+              <a href='https://scholar.google.com/citations?user=srYxYhcAAAAJ&hl=en&oi=ao' target='_blank'>Dr. M. Moshiul Hoque</a>.<br/><br/>
+              My research interests are Deep Learning, Human-Computer Interaction, Computer Vision, NLP, Machine Learning on IoT Devices and I'm quite fascinated by the attention mechanism.
+            </p>
           </div>
         </div>
 
         <div class='proj-title'>
           <h2>Projects</h2>
-          <p>
+          <!-- <p>
             I am interested in Deep Learning, Human-Computer Interaction, Computer Vision, NLP, Machine Learning on IoT Devices and quite fascinated by the attention mechanism. The expressivity of Deep Learning algorithms has inspired me to open up to a broad spectrum of the field in search of new interdisciplinary applications.
-          </p>
+          </p> -->
+        </div>
+        
+        <div class='proj-card'>
+          <img
+            class='proj-pic'
+            src='images/aiwm_icon.svg'
+          >
+          <div class='proj-doc'>
+            <h3>Deep Learning-based Audio in Image Watermarking (AWM) &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>Tensorflow&nbsp;</span></h3>
+            <p>
+              AWM is a Deep Learning model that can embed audio data inside RGB image without degrading the quality and extract the audio data from the marked image. The model's Siamese Network is able to distinguish noisy extracted audio from the marked image which can be used for speech command recognition simply by scanning image.
+            </p>
+            <div>
+              <a href='https://colab.research.google.com/drive/1a71DR7oJx8wEbK3Mb-8c3FU8wCI8gMIS?usp=sharing' target='_blank'>AWM Network</a>
+              <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+              <a href='https://colab.research.google.com/drive/1n3KVwUa1CR3RdCRpjbBFYzTHWW1RxRzG?usp=sharing' target='_blank'>AWM One-Shot Similarity Detector</a>
+            </div>
+          </div>
+          <div class='proj-extra'>
+            <div id="aiwm_chart_container"></div>
+            <!-- Importing React & Stuff -->
+            <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+            <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+            <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+            <script src="https://unpkg.com/recharts@2.0.8/umd/Recharts.min.js" crossorigin></script>
+            <script src="aiwm_chart.js"></script>
+            <!-- Importing React & Stuff -->
+          </div>
         </div>
 
         <div class='proj-card'>
@@ -136,25 +160,10 @@
           </div>
         </div>
         <div class='proj-card'>
-          <div class='proj-pic'
-            style='display: flex; justify-content: center; align-items: center; border: 1px solid rgba(0, 0, 0, 0.5); border-radius: 5px; height: 110px;'
-          >
-            <code>implementations</code>
-          </div>
-          <div class='proj-doc'>
-            <h3>Code reproduction of various papers &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>PyTorch</span></h3>
-            <p>
-              Code reproducibility of papers is becoming more and more challenging as models are becoming more complex and abstract. Here are some of my practice attempts to reproduce models from papers with help from various online forums using popular machine learning frameworks.
-            </p>
-            <div>
-              <a href='https://github.com/arjondas/implementations'>Code</a>
-            </div>
-          </div>
-        </div>
-        <div class='proj-card'>
           <img
             class='proj-pic'
             src='images/sfms.png'
+            style="background-color: white;"
           >
           <div class='proj-doc'>
             <h3>IoT Based Smart Food Monitoring System &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'><br/>Raspberry Pi&nbsp; | &nbsp;Swift&nbsp; | &nbsp;Python&nbsp; | &nbsp;MongoDB&nbsp; | &nbsp;Express&nbsp; | &nbsp;Node.js</span></h3>
@@ -165,6 +174,22 @@
               <a href='docs/IoT_Based_Smart_Food_Monitoring_System Final.pdf'>Thesis</a>
               <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
               <a href='https://github.com/arjondas/sfms'>Code</a>
+            </div>
+          </div>
+        </div>
+        <div class='proj-card'>
+          <div class='proj-pic'
+            style='display: flex; justify-content: center; align-items: center; border: 1px solid rgba(0, 0, 0, 0.5); border-radius: 5px; height: 110px;'
+          >
+            <code>&#60;implementations\&#62;</code>
+          </div>
+          <div class='proj-doc'>
+            <h3>Code reproduction of various papers &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>PyTorch</span></h3>
+            <p>
+              Code reproducibility of papers is becoming more and more challenging as models are becoming more complex and abstract. Here are some of my practice attempts to reproduce models from papers with help from various online forums using popular machine learning frameworks.
+            </p>
+            <div>
+              <a href='https://github.com/arjondas/implementations'>Code</a>
             </div>
           </div>
         </div>
@@ -202,7 +227,7 @@
           <img
             class='proj-pic'
             src='images/direct2d.png'
-            style='padding: 30px; border-radius: 50px;'
+            style='padding: 20px; border-radius: 50px;'
           >
           <div class='proj-doc'>
             <h3>Direct 2D &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>Swift</span></h3>

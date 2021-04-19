@@ -1,0 +1,27 @@
+.Chart-Container{
+  width: 100%;
+  font-size: 10px;
+  height: 350px;
+  padding: 10px 0 20px 0;
+}
+
+.Chart-Label{
+  width: 100%;
+  font-size: 12px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.tooltip {
+	border-radius: 5px;
+	padding: 10px;
+	/* max-width: 150px; */
+	min-width: 130px;
+  max-width: 500px;
+}
+
+.tooltip-image {
+  background-color: white;
+  margin-top: 10px;
+  width: 100%;
+}
