@@ -19,7 +19,6 @@ var CustomToolTip = function CustomToolTip(_ref) {
       accuracy = payload[0].payload.accuracy || 0;
       id = payload[0].payload.id || '';
     }
-    console.log('images/cutout_' + label + '.png');
     return React.createElement(
       'div',
       { className: 'tooltip', style: { backgroundColor: toneMid, border: '0.5px solid ' + toneLighter } },
@@ -48,7 +47,7 @@ var renderLegendText = function renderLegendText(value, entry) {
   return React.createElement(
     'span',
     {
-      style: Object.assign({}, color) },
+      style: { color: color } },
     'Accuracy of Similarity Detection between original and noisy extracted audio'
   );
 };
