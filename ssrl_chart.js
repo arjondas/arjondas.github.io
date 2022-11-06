@@ -1,0 +1,4176 @@
+var Recharts = window.Recharts;
+
+var toneMid = 'rgb(32,32,32)';
+var toneLight = 'rgb(82,82,82)';
+var toneLighter = 'rgb(200,200,200)';
+var mainColor = 'seagreen';
+
+var data = [{
+  "epoch": 0,
+  "vicreg-vmx-cifar10": 32.93000031,
+  "vicreg-cifar10": 34.14999771
+}, {
+  "epoch": 1,
+  "vicreg-vmx-cifar10": 25.68999863,
+  "vicreg-cifar10": 38.18999863
+}, {
+  "epoch": 2,
+  "vicreg-vmx-cifar10": 31.84999847,
+  "vicreg-cifar10": 42.5
+}, {
+  "epoch": 3,
+  "vicreg-vmx-cifar10": 30.22999954,
+  "vicreg-cifar10": 39.75999832
+}, {
+  "epoch": 4,
+  "vicreg-vmx-cifar10": 41.75999832,
+  "vicreg-cifar10": 40.52999878
+}, {
+  "epoch": 5,
+  "vicreg-vmx-cifar10": 41.12999725,
+  "vicreg-cifar10": 52.40999985
+}, {
+  "epoch": 6,
+  "vicreg-vmx-cifar10": 42.5399971,
+  "vicreg-cifar10": 55.2899971
+}, {
+  "epoch": 7,
+  "vicreg-vmx-cifar10": 49.82999802,
+  "vicreg-cifar10": 51.02000046
+}, {
+  "epoch": 8,
+  "vicreg-vmx-cifar10": 46.12999725,
+  "vicreg-cifar10": 58.1099968
+}, {
+  "epoch": 9,
+  "vicreg-vmx-cifar10": 58.62999725,
+  "vicreg-cifar10": 61.62999725
+}, {
+  "epoch": 10,
+  "vicreg-vmx-cifar10": 49.89999771,
+  "vicreg-cifar10": 58.01999664
+}, {
+  "epoch": 11,
+  "vicreg-vmx-cifar10": 56.47999954,
+  "vicreg-cifar10": 67.98999786
+}, {
+  "epoch": 12,
+  "vicreg-vmx-cifar10": 61.0399971,
+  "vicreg-cifar10": 68.20999908
+}, {
+  "epoch": 13,
+  "vicreg-vmx-cifar10": 58.63999939,
+  "vicreg-cifar10": 70.22000122
+}, {
+  "epoch": 14,
+  "vicreg-vmx-cifar10": 69.36000061,
+  "vicreg-cifar10": 70.18000031
+}, {
+  "epoch": 15,
+  "vicreg-vmx-cifar10": 70.29000092,
+  "vicreg-cifar10": 73.11000061
+}, {
+  "epoch": 16,
+  "vicreg-vmx-cifar10": 67.62999725,
+  "vicreg-cifar10": 74.68000031
+}, {
+  "epoch": 17,
+  "vicreg-vmx-cifar10": 67.93000031,
+  "vicreg-cifar10": 75.04000092
+}, {
+  "epoch": 18,
+  "vicreg-vmx-cifar10": 70.61999512,
+  "vicreg-cifar10": 74.68999481
+}, {
+  "epoch": 19,
+  "vicreg-vmx-cifar10": 73.04999542,
+  "vicreg-cifar10": 75.5
+}, {
+  "epoch": 20,
+  "vicreg-vmx-cifar10": 71.70999908,
+  "vicreg-cifar10": 74.80999756
+}, {
+  "epoch": 21,
+  "vicreg-vmx-cifar10": 70.93000031,
+  "vicreg-cifar10": 72.69999695
+}, {
+  "epoch": 22,
+  "vicreg-vmx-cifar10": 70.95999908,
+  "vicreg-cifar10": 76.94999695
+}, {
+  "epoch": 23,
+  "vicreg-vmx-cifar10": 75.08000183,
+  "vicreg-cifar10": 75.90999603
+}, {
+  "epoch": 24,
+  "vicreg-vmx-cifar10": 74.95999908,
+  "vicreg-cifar10": 74.40000153
+}, {
+  "epoch": 25,
+  "vicreg-vmx-cifar10": 72.86999512,
+  "vicreg-cifar10": 76.88999939
+}, {
+  "epoch": 26,
+  "vicreg-vmx-cifar10": 71.62999725,
+  "vicreg-cifar10": 77.87999725
+}, {
+  "epoch": 27,
+  "vicreg-vmx-cifar10": 74.93000031,
+  "vicreg-cifar10": 77.43000031
+}, {
+  "epoch": 28,
+  "vicreg-vmx-cifar10": 75.94999695,
+  "vicreg-cifar10": 77.61000061
+}, {
+  "epoch": 29,
+  "vicreg-vmx-cifar10": 75.87999725,
+  "vicreg-cifar10": 76.59999847
+}, {
+  "epoch": 30,
+  "vicreg-vmx-cifar10": 75.30999756,
+  "vicreg-cifar10": 77.26999664
+}, {
+  "epoch": 31,
+  "vicreg-vmx-cifar10": 75.23999786,
+  "vicreg-cifar10": 77.47999573
+}, {
+  "epoch": 32,
+  "vicreg-vmx-cifar10": 77.22000122,
+  "vicreg-cifar10": 78.00999451
+}, {
+  "epoch": 33,
+  "vicreg-vmx-cifar10": 77.34999847,
+  "vicreg-cifar10": 74.75
+}, {
+  "epoch": 34,
+  "vicreg-vmx-cifar10": 76.90999603,
+  "vicreg-cifar10": 78.04999542
+}, {
+  "epoch": 35,
+  "vicreg-vmx-cifar10": 75.68999481,
+  "vicreg-cifar10": 79.26999664
+}, {
+  "epoch": 36,
+  "vicreg-vmx-cifar10": 79.00999451,
+  "vicreg-cifar10": 78.51999664
+}, {
+  "epoch": 37,
+  "vicreg-vmx-cifar10": 72.97999573,
+  "vicreg-cifar10": 78.79999542
+}, {
+  "epoch": 38,
+  "vicreg-vmx-cifar10": 77.33999634,
+  "vicreg-cifar10": 77.73999786
+}, {
+  "epoch": 39,
+  "vicreg-vmx-cifar10": 76.09999847,
+  "vicreg-cifar10": 79.38999939
+}, {
+  "epoch": 40,
+  "vicreg-vmx-cifar10": 78.66999817,
+  "vicreg-cifar10": 79.51999664
+}, {
+  "epoch": 41,
+  "vicreg-vmx-cifar10": 77.41999817,
+  "vicreg-cifar10": 79.90000153
+}, {
+  "epoch": 42,
+  "vicreg-vmx-cifar10": 77.48999786,
+  "vicreg-cifar10": 77.40999603
+}, {
+  "epoch": 43,
+  "vicreg-vmx-cifar10": 76.68999481,
+  "vicreg-cifar10": 79.97999573
+}, {
+  "epoch": 44,
+  "vicreg-vmx-cifar10": 79.36999512,
+  "vicreg-cifar10": 78.52999878
+}, {
+  "epoch": 45,
+  "vicreg-vmx-cifar10": 77.97999573,
+  "vicreg-cifar10": 80.12999725
+}, {
+  "epoch": 46,
+  "vicreg-vmx-cifar10": 79.47999573,
+  "vicreg-cifar10": 80.66999817
+}, {
+  "epoch": 47,
+  "vicreg-vmx-cifar10": 79.73999786,
+  "vicreg-cifar10": 79.38999939
+}, {
+  "epoch": 48,
+  "vicreg-vmx-cifar10": 79.37999725,
+  "vicreg-cifar10": 79.98999786
+}, {
+  "epoch": 49,
+  "vicreg-vmx-cifar10": 77.54000092,
+  "vicreg-cifar10": 80.09999847
+}, {
+  "epoch": 50,
+  "vicreg-vmx-cifar10": 79.37999725,
+  "vicreg-cifar10": 81.65999603
+}, {
+  "epoch": 51,
+  "vicreg-vmx-cifar10": 80.25,
+  "vicreg-cifar10": 80.61999512
+}, {
+  "epoch": 52,
+  "vicreg-vmx-cifar10": 79.37999725,
+  "vicreg-cifar10": 81.75
+}, {
+  "epoch": 53,
+  "vicreg-vmx-cifar10": 79.80999756,
+  "vicreg-cifar10": 81.18999481
+}, {
+  "epoch": 54,
+  "vicreg-vmx-cifar10": 77.79999542,
+  "vicreg-cifar10": 80.50999451
+}, {
+  "epoch": 55,
+  "vicreg-vmx-cifar10": 77.62999725,
+  "vicreg-cifar10": 80.5
+}, {
+  "epoch": 56,
+  "vicreg-vmx-cifar10": 77.55999756,
+  "vicreg-cifar10": 80.91999817
+}, {
+  "epoch": 57,
+  "vicreg-vmx-cifar10": 80.61000061,
+  "vicreg-cifar10": 81.29000092
+}, {
+  "epoch": 58,
+  "vicreg-vmx-cifar10": 80.29000092,
+  "vicreg-cifar10": 80.68999481
+}, {
+  "epoch": 59,
+  "vicreg-vmx-cifar10": 81.61999512,
+  "vicreg-cifar10": 82.44999695
+}, {
+  "epoch": 60,
+  "vicreg-vmx-cifar10": 80.98999786,
+  "vicreg-cifar10": 82.0799942
+}, {
+  "epoch": 61,
+  "vicreg-vmx-cifar10": 80.18999481,
+  "vicreg-cifar10": 82.15999603
+}, {
+  "epoch": 62,
+  "vicreg-vmx-cifar10": 81.18999481,
+  "vicreg-cifar10": 82.5799942
+}, {
+  "epoch": 63,
+  "vicreg-vmx-cifar10": 79.63999939,
+  "vicreg-cifar10": 82.26999664
+}, {
+  "epoch": 64,
+  "vicreg-vmx-cifar10": 79.48999786,
+  "vicreg-cifar10": 81.84999847
+}, {
+  "epoch": 65,
+  "vicreg-vmx-cifar10": 82.45999908,
+  "vicreg-cifar10": 82.88999939
+}, {
+  "epoch": 66,
+  "vicreg-vmx-cifar10": 82.40999603,
+  "vicreg-cifar10": 82.98999786
+}, {
+  "epoch": 67,
+  "vicreg-vmx-cifar10": 78,
+  "vicreg-cifar10": 82.50999451
+}, {
+  "epoch": 68,
+  "vicreg-vmx-cifar10": 78.50999451,
+  "vicreg-cifar10": 80.63999939
+}, {
+  "epoch": 69,
+  "vicreg-vmx-cifar10": 82.34999847,
+  "vicreg-cifar10": 81.54000092
+}, {
+  "epoch": 70,
+  "vicreg-vmx-cifar10": 81.43999481,
+  "vicreg-cifar10": 83.70999908
+}, {
+  "epoch": 71,
+  "vicreg-vmx-cifar10": 82.40999603,
+  "vicreg-cifar10": 82.55999756
+}, {
+  "epoch": 72,
+  "vicreg-vmx-cifar10": 80.12999725,
+  "vicreg-cifar10": 82.48999786
+}, {
+  "epoch": 73,
+  "vicreg-vmx-cifar10": 81.05999756,
+  "vicreg-cifar10": 79.84999847
+}, {
+  "epoch": 74,
+  "vicreg-vmx-cifar10": 83,
+  "vicreg-cifar10": 83.59999847
+}, {
+  "epoch": 75,
+  "vicreg-vmx-cifar10": 81.66999817,
+  "vicreg-cifar10": 82.04000092
+}, {
+  "epoch": 76,
+  "vicreg-vmx-cifar10": 81.84999847,
+  "vicreg-cifar10": 82.04000092
+}, {
+  "epoch": 77,
+  "vicreg-vmx-cifar10": 83.50999451,
+  "vicreg-cifar10": 82.72000122
+}, {
+  "epoch": 78,
+  "vicreg-vmx-cifar10": 82.87999725,
+  "vicreg-cifar10": 83.44999695
+}, {
+  "epoch": 79,
+  "vicreg-vmx-cifar10": 83.93000031,
+  "vicreg-cifar10": 82.5799942
+}, {
+  "epoch": 80,
+  "vicreg-vmx-cifar10": 82.09999847,
+  "vicreg-cifar10": 82.51999664
+}, {
+  "epoch": 81,
+  "vicreg-vmx-cifar10": 83.20999908,
+  "vicreg-cifar10": 82.68000031
+}, {
+  "epoch": 82,
+  "vicreg-vmx-cifar10": 83.95999908,
+  "vicreg-cifar10": 82.61000061
+}, {
+  "epoch": 83,
+  "vicreg-vmx-cifar10": 82.97000122,
+  "vicreg-cifar10": 81.04999542
+}, {
+  "epoch": 84,
+  "vicreg-vmx-cifar10": 81.20999908,
+  "vicreg-cifar10": 83.59999847
+}, {
+  "epoch": 85,
+  "vicreg-vmx-cifar10": 83,
+  "vicreg-cifar10": 82.52999878
+}, {
+  "epoch": 86,
+  "vicreg-vmx-cifar10": 81.83999634,
+  "vicreg-cifar10": 83.3299942
+}, {
+  "epoch": 87,
+  "vicreg-vmx-cifar10": 81.51999664,
+  "vicreg-cifar10": 83.70999908
+}, {
+  "epoch": 88,
+  "vicreg-vmx-cifar10": 82.86999512,
+  "vicreg-cifar10": 83.68000031
+}, {
+  "epoch": 89,
+  "vicreg-vmx-cifar10": 84.16999817,
+  "vicreg-cifar10": 83.77999878
+}, {
+  "epoch": 90,
+  "vicreg-vmx-cifar10": 83.79000092,
+  "vicreg-cifar10": 84.18000031
+}, {
+  "epoch": 91,
+  "vicreg-vmx-cifar10": 82.36999512,
+  "vicreg-cifar10": 83.51999664
+}, {
+  "epoch": 92,
+  "vicreg-vmx-cifar10": 82.86000061,
+  "vicreg-cifar10": 80.55999756
+}, {
+  "epoch": 93,
+  "vicreg-vmx-cifar10": 83.79000092,
+  "vicreg-cifar10": 82.97000122
+}, {
+  "epoch": 94,
+  "vicreg-vmx-cifar10": 83.69999695,
+  "vicreg-cifar10": 82.68999481
+}, {
+  "epoch": 95,
+  "vicreg-vmx-cifar10": 82.93000031,
+  "vicreg-cifar10": 82.84999847
+}, {
+  "epoch": 96,
+  "vicreg-vmx-cifar10": 82.38999939,
+  "vicreg-cifar10": 84.59999847
+}, {
+  "epoch": 97,
+  "vicreg-vmx-cifar10": 82.79999542,
+  "vicreg-cifar10": 84.15000153
+}, {
+  "epoch": 98,
+  "vicreg-vmx-cifar10": 83.29000092,
+  "vicreg-cifar10": 82.84999847
+}, {
+  "epoch": 99,
+  "vicreg-vmx-cifar10": 84.65999603,
+  "vicreg-cifar10": 81.22999573
+}, {
+  "epoch": 100,
+  "vicreg-vmx-cifar10": 84.31999969,
+  "vicreg-cifar10": 83.43999481
+}, {
+  "epoch": 101,
+  "vicreg-vmx-cifar10": 84.02999878,
+  "vicreg-cifar10": 82.83999634
+}, {
+  "epoch": 102,
+  "vicreg-vmx-cifar10": 84.05999756,
+  "vicreg-cifar10": 83.77999878
+}, {
+  "epoch": 103,
+  "vicreg-vmx-cifar10": 84.29999542,
+  "vicreg-cifar10": 83.70999908
+}, {
+  "epoch": 104,
+  "vicreg-vmx-cifar10": 82.88999939,
+  "vicreg-cifar10": 83.63999939
+}, {
+  "epoch": 105,
+  "vicreg-vmx-cifar10": 84.86999512,
+  "vicreg-cifar10": 84.75
+}, {
+  "epoch": 106,
+  "vicreg-vmx-cifar10": 83.52999878,
+  "vicreg-cifar10": 83.93999481
+}, {
+  "epoch": 107,
+  "vicreg-vmx-cifar10": 82.16999817,
+  "vicreg-cifar10": 84.65000153
+}, {
+  "epoch": 108,
+  "vicreg-vmx-cifar10": 84.04000092,
+  "vicreg-cifar10": 83.93000031
+}, {
+  "epoch": 109,
+  "vicreg-vmx-cifar10": 83.65000153,
+  "vicreg-cifar10": 83.75999451
+}, {
+  "epoch": 110,
+  "vicreg-vmx-cifar10": 83.79000092,
+  "vicreg-cifar10": 84.13999939
+}, {
+  "epoch": 111,
+  "vicreg-vmx-cifar10": 83.08999634,
+  "vicreg-cifar10": 83.48999786
+}, {
+  "epoch": 112,
+  "vicreg-vmx-cifar10": 84.09999847,
+  "vicreg-cifar10": 84.51999664
+}, {
+  "epoch": 113,
+  "vicreg-vmx-cifar10": 83.41999817,
+  "vicreg-cifar10": 83.84999847
+}, {
+  "epoch": 114,
+  "vicreg-vmx-cifar10": 83.93999481,
+  "vicreg-cifar10": 84.18999481
+}, {
+  "epoch": 115,
+  "vicreg-vmx-cifar10": 82.90000153,
+  "vicreg-cifar10": 83.38999939
+}, {
+  "epoch": 116,
+  "vicreg-vmx-cifar10": 84.13999939,
+  "vicreg-cifar10": 84.40000153
+}, {
+  "epoch": 117,
+  "vicreg-vmx-cifar10": 83.26999664,
+  "vicreg-cifar10": 83.0799942
+}, {
+  "epoch": 118,
+  "vicreg-vmx-cifar10": 84.01999664,
+  "vicreg-cifar10": 83.16999817
+}, {
+  "epoch": 119,
+  "vicreg-vmx-cifar10": 83.54000092,
+  "vicreg-cifar10": 83.63999939
+}, {
+  "epoch": 120,
+  "vicreg-vmx-cifar10": 83.33999634,
+  "vicreg-cifar10": 85.00999451
+}, {
+  "epoch": 121,
+  "vicreg-vmx-cifar10": 84.81999969,
+  "vicreg-cifar10": 82.91999817
+}, {
+  "epoch": 122,
+  "vicreg-vmx-cifar10": 84.43999481,
+  "vicreg-cifar10": 84.90999603
+}, {
+  "epoch": 123,
+  "vicreg-vmx-cifar10": 84.79000092,
+  "vicreg-cifar10": 83.97999573
+}, {
+  "epoch": 124,
+  "vicreg-vmx-cifar10": 84.43999481,
+  "vicreg-cifar10": 84.27999878
+}, {
+  "epoch": 125,
+  "vicreg-vmx-cifar10": 84.95999908,
+  "vicreg-cifar10": 83.19999695
+}, {
+  "epoch": 126,
+  "vicreg-vmx-cifar10": 85.04000092,
+  "vicreg-cifar10": 84.11000061
+}, {
+  "epoch": 127,
+  "vicreg-vmx-cifar10": 84.43000031,
+  "vicreg-cifar10": 85.11999512
+}, {
+  "epoch": 128,
+  "vicreg-vmx-cifar10": 85.65000153,
+  "vicreg-cifar10": 85.16999817
+}, {
+  "epoch": 129,
+  "vicreg-vmx-cifar10": 83.30999756,
+  "vicreg-cifar10": 85.09999847
+}, {
+  "epoch": 130,
+  "vicreg-vmx-cifar10": 84.68000031,
+  "vicreg-cifar10": 84.65999603
+}, {
+  "epoch": 131,
+  "vicreg-vmx-cifar10": 85.5,
+  "vicreg-cifar10": 82.45999908
+}, {
+  "epoch": 132,
+  "vicreg-vmx-cifar10": 85.54999542,
+  "vicreg-cifar10": 85.08999634
+}, {
+  "epoch": 133,
+  "vicreg-vmx-cifar10": 84.81999969,
+  "vicreg-cifar10": 85.26999664
+}, {
+  "epoch": 134,
+  "vicreg-vmx-cifar10": 83.5799942,
+  "vicreg-cifar10": 84.29999542
+}, {
+  "epoch": 135,
+  "vicreg-vmx-cifar10": 84.36999512,
+  "vicreg-cifar10": 83.79000092
+}, {
+  "epoch": 136,
+  "vicreg-vmx-cifar10": 83.36999512,
+  "vicreg-cifar10": 85.26999664
+}, {
+  "epoch": 137,
+  "vicreg-vmx-cifar10": 85,
+  "vicreg-cifar10": 83.81999969
+}, {
+  "epoch": 138,
+  "vicreg-vmx-cifar10": 84.72000122,
+  "vicreg-cifar10": 83.93999481
+}, {
+  "epoch": 139,
+  "vicreg-vmx-cifar10": 84.04000092,
+  "vicreg-cifar10": 85.40000153
+}, {
+  "epoch": 140,
+  "vicreg-vmx-cifar10": 85.38999939,
+  "vicreg-cifar10": 83.90999603
+}, {
+  "epoch": 141,
+  "vicreg-vmx-cifar10": 83.93999481,
+  "vicreg-cifar10": 84.36000061
+}, {
+  "epoch": 142,
+  "vicreg-vmx-cifar10": 85.23999786,
+  "vicreg-cifar10": 84.50999451
+}, {
+  "epoch": 143,
+  "vicreg-vmx-cifar10": 86.22999573,
+  "vicreg-cifar10": 84.73999786
+}, {
+  "epoch": 144,
+  "vicreg-vmx-cifar10": 84.47999573,
+  "vicreg-cifar10": 83.54999542
+}, {
+  "epoch": 145,
+  "vicreg-vmx-cifar10": 85.51999664,
+  "vicreg-cifar10": 84.5
+}, {
+  "epoch": 146,
+  "vicreg-vmx-cifar10": 83.93000031,
+  "vicreg-cifar10": 84.91999817
+}, {
+  "epoch": 147,
+  "vicreg-vmx-cifar10": 85.47000122,
+  "vicreg-cifar10": 85.48999786
+}, {
+  "epoch": 148,
+  "vicreg-vmx-cifar10": 84.86999512,
+  "vicreg-cifar10": 84.73999786
+}, {
+  "epoch": 149,
+  "vicreg-vmx-cifar10": 84.50999451,
+  "vicreg-cifar10": 84.34999847
+}, {
+  "epoch": 150,
+  "vicreg-vmx-cifar10": 85.15000153,
+  "vicreg-cifar10": 85.30999756
+}, {
+  "epoch": 151,
+  "vicreg-vmx-cifar10": 86.18000031,
+  "vicreg-cifar10": 86.04000092
+}, {
+  "epoch": 152,
+  "vicreg-vmx-cifar10": 84.5,
+  "vicreg-cifar10": 85.06999969
+}, {
+  "epoch": 153,
+  "vicreg-vmx-cifar10": 84.59999847,
+  "vicreg-cifar10": 85.5
+}, {
+  "epoch": 154,
+  "vicreg-vmx-cifar10": 84.73999786,
+  "vicreg-cifar10": 85.11000061
+}, {
+  "epoch": 155,
+  "vicreg-vmx-cifar10": 85.13999939,
+  "vicreg-cifar10": 86.37999725
+}, {
+  "epoch": 156,
+  "vicreg-vmx-cifar10": 85.83999634,
+  "vicreg-cifar10": 85.34999847
+}, {
+  "epoch": 157,
+  "vicreg-vmx-cifar10": 83.80999756,
+  "vicreg-cifar10": 85.43000031
+}, {
+  "epoch": 158,
+  "vicreg-vmx-cifar10": 86.13999939,
+  "vicreg-cifar10": 85.15999603
+}, {
+  "epoch": 159,
+  "vicreg-vmx-cifar10": 85.66999817,
+  "vicreg-cifar10": 84.5799942
+}, {
+  "epoch": 160,
+  "vicreg-vmx-cifar10": 84.79999542,
+  "vicreg-cifar10": 84.63999939
+}, {
+  "epoch": 161,
+  "vicreg-vmx-cifar10": 85.84999847,
+  "vicreg-cifar10": 84.25
+}, {
+  "epoch": 162,
+  "vicreg-vmx-cifar10": 85.56999969,
+  "vicreg-cifar10": 85.38999939
+}, {
+  "epoch": 163,
+  "vicreg-vmx-cifar10": 86.29999542,
+  "vicreg-cifar10": 85.90999603
+}, {
+  "epoch": 164,
+  "vicreg-vmx-cifar10": 86.02999878,
+  "vicreg-cifar10": 84.36000061
+}, {
+  "epoch": 165,
+  "vicreg-vmx-cifar10": 84.50999451,
+  "vicreg-cifar10": 85.93999481
+}, {
+  "epoch": 166,
+  "vicreg-vmx-cifar10": 84.76999664,
+  "vicreg-cifar10": 85.00999451
+}, {
+  "epoch": 167,
+  "vicreg-vmx-cifar10": 84.54999542,
+  "vicreg-cifar10": 85.0799942
+}, {
+  "epoch": 168,
+  "vicreg-vmx-cifar10": 84.02999878,
+  "vicreg-cifar10": 84.62999725
+}, {
+  "epoch": 169,
+  "vicreg-vmx-cifar10": 86.18999481,
+  "vicreg-cifar10": 85.76999664
+}, {
+  "epoch": 170,
+  "vicreg-vmx-cifar10": 87.01999664,
+  "vicreg-cifar10": 84.02999878
+}, {
+  "epoch": 171,
+  "vicreg-vmx-cifar10": 85.13999939,
+  "vicreg-cifar10": 84.30999756
+}, {
+  "epoch": 172,
+  "vicreg-vmx-cifar10": 84.8299942,
+  "vicreg-cifar10": 86.20999908
+}, {
+  "epoch": 173,
+  "vicreg-vmx-cifar10": 85.59999847,
+  "vicreg-cifar10": 85.72999573
+}, {
+  "epoch": 174,
+  "vicreg-vmx-cifar10": 85.72000122,
+  "vicreg-cifar10": 86.27999878
+}, {
+  "epoch": 175,
+  "vicreg-vmx-cifar10": 83.09999847,
+  "vicreg-cifar10": 85.01999664
+}, {
+  "epoch": 176,
+  "vicreg-vmx-cifar10": 84.76999664,
+  "vicreg-cifar10": 85.45999908
+}, {
+  "epoch": 177,
+  "vicreg-vmx-cifar10": 84.44999695,
+  "vicreg-cifar10": 84.02999878
+}, {
+  "epoch": 178,
+  "vicreg-vmx-cifar10": 85.94999695,
+  "vicreg-cifar10": 84.13999939
+}, {
+  "epoch": 179,
+  "vicreg-vmx-cifar10": 85.70999908,
+  "vicreg-cifar10": 85.18000031
+}, {
+  "epoch": 180,
+  "vicreg-vmx-cifar10": 85.8299942,
+  "vicreg-cifar10": 85.26999664
+}, {
+  "epoch": 181,
+  "vicreg-vmx-cifar10": 85.68000031,
+  "vicreg-cifar10": 85.33999634
+}, {
+  "epoch": 182,
+  "vicreg-vmx-cifar10": 86.36000061,
+  "vicreg-cifar10": 86
+}, {
+  "epoch": 183,
+  "vicreg-vmx-cifar10": 87.00999451,
+  "vicreg-cifar10": 85.87999725
+}, {
+  "epoch": 184,
+  "vicreg-vmx-cifar10": 85.80999756,
+  "vicreg-cifar10": 85.01999664
+}, {
+  "epoch": 185,
+  "vicreg-vmx-cifar10": 86.19999695,
+  "vicreg-cifar10": 85.41999817
+}, {
+  "epoch": 186,
+  "vicreg-vmx-cifar10": 85.90000153,
+  "vicreg-cifar10": 85.83999634
+}, {
+  "epoch": 187,
+  "vicreg-vmx-cifar10": 85.66999817,
+  "vicreg-cifar10": 85.54000092
+}, {
+  "epoch": 188,
+  "vicreg-vmx-cifar10": 85.38999939,
+  "vicreg-cifar10": 86.16999817
+}, {
+  "epoch": 189,
+  "vicreg-vmx-cifar10": 85.11000061,
+  "vicreg-cifar10": 85.54000092
+}, {
+  "epoch": 190,
+  "vicreg-vmx-cifar10": 85.25999451,
+  "vicreg-cifar10": 85.27999878
+}, {
+  "epoch": 191,
+  "vicreg-vmx-cifar10": 84.5799942,
+  "vicreg-cifar10": 86.37999725
+}, {
+  "epoch": 192,
+  "vicreg-vmx-cifar10": 84.68000031,
+  "vicreg-cifar10": 84.63999939
+}, {
+  "epoch": 193,
+  "vicreg-vmx-cifar10": 85.86000061,
+  "vicreg-cifar10": 85.97999573
+}, {
+  "epoch": 194,
+  "vicreg-vmx-cifar10": 85.29999542,
+  "vicreg-cifar10": 85.94999695
+}, {
+  "epoch": 195,
+  "vicreg-vmx-cifar10": 86.36000061,
+  "vicreg-cifar10": 84.72999573
+}, {
+  "epoch": 196,
+  "vicreg-vmx-cifar10": 86.02999878,
+  "vicreg-cifar10": 85.76999664
+}, {
+  "epoch": 197,
+  "vicreg-vmx-cifar10": 86.22999573,
+  "vicreg-cifar10": 83.09999847
+}, {
+  "epoch": 198,
+  "vicreg-vmx-cifar10": 86.04999542,
+  "vicreg-cifar10": 85.97000122
+}, {
+  "epoch": 199,
+  "vicreg-vmx-cifar10": 86.29000092,
+  "vicreg-cifar10": 86.12999725
+}, {
+  "epoch": 200,
+  "vicreg-vmx-cifar10": 85.65999603,
+  "vicreg-cifar10": 86.77999878
+}, {
+  "epoch": 201,
+  "vicreg-vmx-cifar10": 85.81999969,
+  "vicreg-cifar10": 86.25999451
+}, {
+  "epoch": 202,
+  "vicreg-vmx-cifar10": 85.63999939,
+  "vicreg-cifar10": 86.0799942
+}, {
+  "epoch": 203,
+  "vicreg-vmx-cifar10": 86.33999634,
+  "vicreg-cifar10": 85.97999573
+}, {
+  "epoch": 204,
+  "vicreg-vmx-cifar10": 86.18999481,
+  "vicreg-cifar10": 85.76999664
+}, {
+  "epoch": 205,
+  "vicreg-vmx-cifar10": 86.66999817,
+  "vicreg-cifar10": 84.91999817
+}, {
+  "epoch": 206,
+  "vicreg-vmx-cifar10": 86.72000122,
+  "vicreg-cifar10": 84.83999634
+}, {
+  "epoch": 207,
+  "vicreg-vmx-cifar10": 87.76999664,
+  "vicreg-cifar10": 85.34999847
+}, {
+  "epoch": 208,
+  "vicreg-vmx-cifar10": 86.83999634,
+  "vicreg-cifar10": 85.94999695
+}, {
+  "epoch": 209,
+  "vicreg-vmx-cifar10": 86.29999542,
+  "vicreg-cifar10": 85.37999725
+}, {
+  "epoch": 210,
+  "vicreg-vmx-cifar10": 86.73999786,
+  "vicreg-cifar10": 86.86999512
+}, {
+  "epoch": 211,
+  "vicreg-vmx-cifar10": 86.19999695,
+  "vicreg-cifar10": 85.22999573
+}, {
+  "epoch": 212,
+  "vicreg-vmx-cifar10": 85.54000092,
+  "vicreg-cifar10": 86.27999878
+}, {
+  "epoch": 213,
+  "vicreg-vmx-cifar10": 86.91999817,
+  "vicreg-cifar10": 85.41999817
+}, {
+  "epoch": 214,
+  "vicreg-vmx-cifar10": 86.02999878,
+  "vicreg-cifar10": 85.76999664
+}, {
+  "epoch": 215,
+  "vicreg-vmx-cifar10": 86.69999695,
+  "vicreg-cifar10": 86.43999481
+}, {
+  "epoch": 216,
+  "vicreg-vmx-cifar10": 86.06999969,
+  "vicreg-cifar10": 85.81999969
+}, {
+  "epoch": 217,
+  "vicreg-vmx-cifar10": 85.30999756,
+  "vicreg-cifar10": 86.13999939
+}, {
+  "epoch": 218,
+  "vicreg-vmx-cifar10": 86.04999542,
+  "vicreg-cifar10": 84.09999847
+}, {
+  "epoch": 219,
+  "vicreg-vmx-cifar10": 86.47999573,
+  "vicreg-cifar10": 85.83999634
+}, {
+  "epoch": 220,
+  "vicreg-vmx-cifar10": 85.13999939,
+  "vicreg-cifar10": 85.52999878
+}, {
+  "epoch": 221,
+  "vicreg-vmx-cifar10": 85.81999969,
+  "vicreg-cifar10": 84.18000031
+}, {
+  "epoch": 222,
+  "vicreg-vmx-cifar10": 85.47999573,
+  "vicreg-cifar10": 84.8299942
+}, {
+  "epoch": 223,
+  "vicreg-vmx-cifar10": 87.30999756,
+  "vicreg-cifar10": 85.61999512
+}, {
+  "epoch": 224,
+  "vicreg-vmx-cifar10": 86.34999847,
+  "vicreg-cifar10": 85.72000122
+}, {
+  "epoch": 225,
+  "vicreg-vmx-cifar10": 86.93999481,
+  "vicreg-cifar10": 86.22000122
+}, {
+  "epoch": 226,
+  "vicreg-vmx-cifar10": 86.61000061,
+  "vicreg-cifar10": 85.69999695
+}, {
+  "epoch": 227,
+  "vicreg-vmx-cifar10": 86.18999481,
+  "vicreg-cifar10": 86.12999725
+}, {
+  "epoch": 228,
+  "vicreg-vmx-cifar10": 85.84999847,
+  "vicreg-cifar10": 87.09999847
+}, {
+  "epoch": 229,
+  "vicreg-vmx-cifar10": 86.25,
+  "vicreg-cifar10": 86.29999542
+}, {
+  "epoch": 230,
+  "vicreg-vmx-cifar10": 86.63999939,
+  "vicreg-cifar10": 84.63999939
+}, {
+  "epoch": 231,
+  "vicreg-vmx-cifar10": 86.87999725,
+  "vicreg-cifar10": 86.55999756
+}, {
+  "epoch": 232,
+  "vicreg-vmx-cifar10": 86.31999969,
+  "vicreg-cifar10": 86.23999786
+}, {
+  "epoch": 233,
+  "vicreg-vmx-cifar10": 86.29999542,
+  "vicreg-cifar10": 85.61999512
+}, {
+  "epoch": 234,
+  "vicreg-vmx-cifar10": 85.75999451,
+  "vicreg-cifar10": 86.97000122
+}, {
+  "epoch": 235,
+  "vicreg-vmx-cifar10": 87.16999817,
+  "vicreg-cifar10": 86.63999939
+}, {
+  "epoch": 236,
+  "vicreg-vmx-cifar10": 86.83999634,
+  "vicreg-cifar10": 85.97999573
+}, {
+  "epoch": 237,
+  "vicreg-vmx-cifar10": 85.79000092,
+  "vicreg-cifar10": 86.73999786
+}, {
+  "epoch": 238,
+  "vicreg-vmx-cifar10": 86.04999542,
+  "vicreg-cifar10": 86.00999451
+}, {
+  "epoch": 239,
+  "vicreg-vmx-cifar10": 84.86999512,
+  "vicreg-cifar10": 86.18000031
+}, {
+  "epoch": 240,
+  "vicreg-vmx-cifar10": 86.87999725,
+  "vicreg-cifar10": 86.43000031
+}, {
+  "epoch": 241,
+  "vicreg-vmx-cifar10": 85.18000031,
+  "vicreg-cifar10": 85.91999817
+}, {
+  "epoch": 242,
+  "vicreg-vmx-cifar10": 86.55999756,
+  "vicreg-cifar10": 86.93999481
+}, {
+  "epoch": 243,
+  "vicreg-vmx-cifar10": 87.61999512,
+  "vicreg-cifar10": 86.30999756
+}, {
+  "epoch": 244,
+  "vicreg-vmx-cifar10": 86.59999847,
+  "vicreg-cifar10": 85.22000122
+}, {
+  "epoch": 245,
+  "vicreg-vmx-cifar10": 85.62999725,
+  "vicreg-cifar10": 85.8299942
+}, {
+  "epoch": 246,
+  "vicreg-vmx-cifar10": 85.50999451,
+  "vicreg-cifar10": 86.18999481
+}, {
+  "epoch": 247,
+  "vicreg-vmx-cifar10": 85.68000031,
+  "vicreg-cifar10": 86.5
+}, {
+  "epoch": 248,
+  "vicreg-vmx-cifar10": 85.90000153,
+  "vicreg-cifar10": 84.18999481
+}, {
+  "epoch": 249,
+  "vicreg-vmx-cifar10": 87.55999756,
+  "vicreg-cifar10": 85.97999573
+}, {
+  "epoch": 250,
+  "vicreg-vmx-cifar10": 87.08999634,
+  "vicreg-cifar10": 85.94999695
+}, {
+  "epoch": 251,
+  "vicreg-vmx-cifar10": 86.29000092,
+  "vicreg-cifar10": 85.25999451
+}, {
+  "epoch": 252,
+  "vicreg-vmx-cifar10": 87.0799942,
+  "vicreg-cifar10": 86.43999481
+}, {
+  "epoch": 253,
+  "vicreg-vmx-cifar10": 86.41999817,
+  "vicreg-cifar10": 86.75999451
+}, {
+  "epoch": 254,
+  "vicreg-vmx-cifar10": 86.50999451,
+  "vicreg-cifar10": 86.27999878
+}, {
+  "epoch": 255,
+  "vicreg-vmx-cifar10": 87.22000122,
+  "vicreg-cifar10": 86.45999908
+}, {
+  "epoch": 256,
+  "vicreg-vmx-cifar10": 87.84999847,
+  "vicreg-cifar10": 85.13999939
+}, {
+  "epoch": 257,
+  "vicreg-vmx-cifar10": 87.55999756,
+  "vicreg-cifar10": 85.5799942
+}, {
+  "epoch": 258,
+  "vicreg-vmx-cifar10": 87.23999786,
+  "vicreg-cifar10": 84.5
+}, {
+  "epoch": 259,
+  "vicreg-vmx-cifar10": 87.04999542,
+  "vicreg-cifar10": 85.65000153
+}, {
+  "epoch": 260,
+  "vicreg-vmx-cifar10": 87.48999786,
+  "vicreg-cifar10": 85.83999634
+}, {
+  "epoch": 261,
+  "vicreg-vmx-cifar10": 87.26999664,
+  "vicreg-cifar10": 86.47000122
+}, {
+  "epoch": 262,
+  "vicreg-vmx-cifar10": 86,
+  "vicreg-cifar10": 86.38999939
+}, {
+  "epoch": 263,
+  "vicreg-vmx-cifar10": 86.84999847,
+  "vicreg-cifar10": 86.09999847
+}, {
+  "epoch": 264,
+  "vicreg-vmx-cifar10": 86.79000092,
+  "vicreg-cifar10": 87.31999969
+}, {
+  "epoch": 265,
+  "vicreg-vmx-cifar10": 85.70999908,
+  "vicreg-cifar10": 86.59999847
+}, {
+  "epoch": 266,
+  "vicreg-vmx-cifar10": 84.54000092,
+  "vicreg-cifar10": 85.56999969
+}, {
+  "epoch": 267,
+  "vicreg-vmx-cifar10": 87.20999908,
+  "vicreg-cifar10": 86.23999786
+}, {
+  "epoch": 268,
+  "vicreg-vmx-cifar10": 87.8299942,
+  "vicreg-cifar10": 86.93000031
+}, {
+  "epoch": 269,
+  "vicreg-vmx-cifar10": 87.15000153,
+  "vicreg-cifar10": 86.34999847
+}, {
+  "epoch": 270,
+  "vicreg-vmx-cifar10": 85.8299942,
+  "vicreg-cifar10": 85.98999786
+}, {
+  "epoch": 271,
+  "vicreg-vmx-cifar10": 87.38999939,
+  "vicreg-cifar10": 86.30999756
+}, {
+  "epoch": 272,
+  "vicreg-vmx-cifar10": 87.38999939,
+  "vicreg-cifar10": 85.61000061
+}, {
+  "epoch": 273,
+  "vicreg-vmx-cifar10": 86.83999634,
+  "vicreg-cifar10": 86.86999512
+}, {
+  "epoch": 274,
+  "vicreg-vmx-cifar10": 86.5799942,
+  "vicreg-cifar10": 86.36000061
+}, {
+  "epoch": 275,
+  "vicreg-vmx-cifar10": 85.11000061,
+  "vicreg-cifar10": 86.97000122
+}, {
+  "epoch": 276,
+  "vicreg-vmx-cifar10": 87.47999573,
+  "vicreg-cifar10": 87.06999969
+}, {
+  "epoch": 277,
+  "vicreg-vmx-cifar10": 87.81999969,
+  "vicreg-cifar10": 86.77999878
+}, {
+  "epoch": 278,
+  "vicreg-vmx-cifar10": 88.02999878,
+  "vicreg-cifar10": 86.61999512
+}, {
+  "epoch": 279,
+  "vicreg-vmx-cifar10": 87.72999573,
+  "vicreg-cifar10": 86.54999542
+}, {
+  "epoch": 280,
+  "vicreg-vmx-cifar10": 86.91999817,
+  "vicreg-cifar10": 86.73999786
+}, {
+  "epoch": 281,
+  "vicreg-vmx-cifar10": 87.91999817,
+  "vicreg-cifar10": 86.75999451
+}, {
+  "epoch": 282,
+  "vicreg-vmx-cifar10": 87.38999939,
+  "vicreg-cifar10": 87.06999969
+}, {
+  "epoch": 283,
+  "vicreg-vmx-cifar10": 87.23999786,
+  "vicreg-cifar10": 87.08999634
+}, {
+  "epoch": 284,
+  "vicreg-vmx-cifar10": 88,
+  "vicreg-cifar10": 85.13999939
+}, {
+  "epoch": 285,
+  "vicreg-vmx-cifar10": 86.95999908,
+  "vicreg-cifar10": 85.65000153
+}, {
+  "epoch": 286,
+  "vicreg-vmx-cifar10": 86.90000153,
+  "vicreg-cifar10": 85.93999481
+}, {
+  "epoch": 287,
+  "vicreg-vmx-cifar10": 86.72999573,
+  "vicreg-cifar10": 85.86999512
+}, {
+  "epoch": 288,
+  "vicreg-vmx-cifar10": 84.36000061,
+  "vicreg-cifar10": 87.05999756
+}, {
+  "epoch": 289,
+  "vicreg-vmx-cifar10": 86.8299942,
+  "vicreg-cifar10": 86.65000153
+}, {
+  "epoch": 290,
+  "vicreg-vmx-cifar10": 87.94999695,
+  "vicreg-cifar10": 87.11999512
+}, {
+  "epoch": 291,
+  "vicreg-vmx-cifar10": 85.93999481,
+  "vicreg-cifar10": 86.84999847
+}, {
+  "epoch": 292,
+  "vicreg-vmx-cifar10": 86.98999786,
+  "vicreg-cifar10": 86.65000153
+}, {
+  "epoch": 293,
+  "vicreg-vmx-cifar10": 86.93000031,
+  "vicreg-cifar10": 87.12999725
+}, {
+  "epoch": 294,
+  "vicreg-vmx-cifar10": 86.66999817,
+  "vicreg-cifar10": 87.47000122
+}, {
+  "epoch": 295,
+  "vicreg-vmx-cifar10": 87.15999603,
+  "vicreg-cifar10": 86.63999939
+}, {
+  "epoch": 296,
+  "vicreg-vmx-cifar10": 88.04000092,
+  "vicreg-cifar10": 85.51999664
+}, {
+  "epoch": 297,
+  "vicreg-vmx-cifar10": 87.18999481,
+  "vicreg-cifar10": 86.90999603
+}, {
+  "epoch": 298,
+  "vicreg-vmx-cifar10": 87.61000061,
+  "vicreg-cifar10": 87.08999634
+}, {
+  "epoch": 299,
+  "vicreg-vmx-cifar10": 86.88999939,
+  "vicreg-cifar10": 86.79000092
+}, {
+  "epoch": 300,
+  "vicreg-vmx-cifar10": 87.95999908,
+  "vicreg-cifar10": 85.79999542
+}, {
+  "epoch": 301,
+  "vicreg-vmx-cifar10": 87.18000031,
+  "vicreg-cifar10": 86.25
+}, {
+  "epoch": 302,
+  "vicreg-vmx-cifar10": 87.3299942,
+  "vicreg-cifar10": 87.09999847
+}, {
+  "epoch": 303,
+  "vicreg-vmx-cifar10": 87.91999817,
+  "vicreg-cifar10": 86.97999573
+}, {
+  "epoch": 304,
+  "vicreg-vmx-cifar10": 86.91999817,
+  "vicreg-cifar10": 86.31999969
+}, {
+  "epoch": 305,
+  "vicreg-vmx-cifar10": 87.38999939,
+  "vicreg-cifar10": 87.65000153
+}, {
+  "epoch": 306,
+  "vicreg-vmx-cifar10": 87.50999451,
+  "vicreg-cifar10": 86.29000092
+}, {
+  "epoch": 307,
+  "vicreg-vmx-cifar10": 87.73999786,
+  "vicreg-cifar10": 86.93000031
+}, {
+  "epoch": 308,
+  "vicreg-vmx-cifar10": 87.15999603,
+  "vicreg-cifar10": 87.16999817
+}, {
+  "epoch": 309,
+  "vicreg-vmx-cifar10": 86.59999847,
+  "vicreg-cifar10": 86.09999847
+}, {
+  "epoch": 310,
+  "vicreg-vmx-cifar10": 87.45999908,
+  "vicreg-cifar10": 87.11999512
+}, {
+  "epoch": 311,
+  "vicreg-vmx-cifar10": 87.19999695,
+  "vicreg-cifar10": 87.04000092
+}, {
+  "epoch": 312,
+  "vicreg-vmx-cifar10": 87.5,
+  "vicreg-cifar10": 87.29000092
+}, {
+  "epoch": 313,
+  "vicreg-vmx-cifar10": 87.25,
+  "vicreg-cifar10": 86.22999573
+}, {
+  "epoch": 314,
+  "vicreg-vmx-cifar10": 86.33999634,
+  "vicreg-cifar10": 86.97999573
+}, {
+  "epoch": 315,
+  "vicreg-vmx-cifar10": 86.75999451,
+  "vicreg-cifar10": 87.5
+}, {
+  "epoch": 316,
+  "vicreg-vmx-cifar10": 87.73999786,
+  "vicreg-cifar10": 87.33999634
+}, {
+  "epoch": 317,
+  "vicreg-vmx-cifar10": 87.06999969,
+  "vicreg-cifar10": 88.19999695
+}, {
+  "epoch": 318,
+  "vicreg-vmx-cifar10": 87.30999756,
+  "vicreg-cifar10": 87.29000092
+}, {
+  "epoch": 319,
+  "vicreg-vmx-cifar10": 87.18000031,
+  "vicreg-cifar10": 85.83999634
+}, {
+  "epoch": 320,
+  "vicreg-vmx-cifar10": 85.97000122,
+  "vicreg-cifar10": 85.75999451
+}, {
+  "epoch": 321,
+  "vicreg-vmx-cifar10": 87.26999664,
+  "vicreg-cifar10": 85.94999695
+}, {
+  "epoch": 322,
+  "vicreg-vmx-cifar10": 87.61999512,
+  "vicreg-cifar10": 86.5
+}, {
+  "epoch": 323,
+  "vicreg-vmx-cifar10": 87.26999664,
+  "vicreg-cifar10": 87.11999512
+}, {
+  "epoch": 324,
+  "vicreg-vmx-cifar10": 88.15000153,
+  "vicreg-cifar10": 87.00999451
+}, {
+  "epoch": 325,
+  "vicreg-vmx-cifar10": 88.36999512,
+  "vicreg-cifar10": 87.37999725
+}, {
+  "epoch": 326,
+  "vicreg-vmx-cifar10": 86.75,
+  "vicreg-cifar10": 87.04000092
+}, {
+  "epoch": 327,
+  "vicreg-vmx-cifar10": 87.98999786,
+  "vicreg-cifar10": 87.29000092
+}, {
+  "epoch": 328,
+  "vicreg-vmx-cifar10": 88.16999817,
+  "vicreg-cifar10": 86.18999481
+}, {
+  "epoch": 329,
+  "vicreg-vmx-cifar10": 86.30999756,
+  "vicreg-cifar10": 86.34999847
+}, {
+  "epoch": 330,
+  "vicreg-vmx-cifar10": 85.3299942,
+  "vicreg-cifar10": 86.52999878
+}, {
+  "epoch": 331,
+  "vicreg-vmx-cifar10": 88.48999786,
+  "vicreg-cifar10": 87.44999695
+}, {
+  "epoch": 332,
+  "vicreg-vmx-cifar10": 87.77999878,
+  "vicreg-cifar10": 86.65000153
+}, {
+  "epoch": 333,
+  "vicreg-vmx-cifar10": 88.26999664,
+  "vicreg-cifar10": 86.65999603
+}, {
+  "epoch": 334,
+  "vicreg-vmx-cifar10": 87.44999695,
+  "vicreg-cifar10": 86.94999695
+}, {
+  "epoch": 335,
+  "vicreg-vmx-cifar10": 85.68999481,
+  "vicreg-cifar10": 87.40999603
+}, {
+  "epoch": 336,
+  "vicreg-vmx-cifar10": 86.29000092,
+  "vicreg-cifar10": 86.36999512
+}, {
+  "epoch": 337,
+  "vicreg-vmx-cifar10": 87.72999573,
+  "vicreg-cifar10": 86.5799942
+}, {
+  "epoch": 338,
+  "vicreg-vmx-cifar10": 86.94999695,
+  "vicreg-cifar10": 86.50999451
+}, {
+  "epoch": 339,
+  "vicreg-vmx-cifar10": 88.36000061,
+  "vicreg-cifar10": 87.52999878
+}, {
+  "epoch": 340,
+  "vicreg-vmx-cifar10": 87.06999969,
+  "vicreg-cifar10": 86.22999573
+}, {
+  "epoch": 341,
+  "vicreg-vmx-cifar10": 87.86000061,
+  "vicreg-cifar10": 87.23999786
+}, {
+  "epoch": 342,
+  "vicreg-vmx-cifar10": 86.58999634,
+  "vicreg-cifar10": 86.8299942
+}, {
+  "epoch": 343,
+  "vicreg-vmx-cifar10": 88.25999451,
+  "vicreg-cifar10": 88.13999939
+}, {
+  "epoch": 344,
+  "vicreg-vmx-cifar10": 87.40999603,
+  "vicreg-cifar10": 85.97999573
+}, {
+  "epoch": 345,
+  "vicreg-vmx-cifar10": 87.54000092,
+  "vicreg-cifar10": 86.54000092
+}, {
+  "epoch": 346,
+  "vicreg-vmx-cifar10": 88.43000031,
+  "vicreg-cifar10": 87.70999908
+}, {
+  "epoch": 347,
+  "vicreg-vmx-cifar10": 87.25,
+  "vicreg-cifar10": 87.19999695
+}, {
+  "epoch": 348,
+  "vicreg-vmx-cifar10": 86.8299942,
+  "vicreg-cifar10": 87.40000153
+}, {
+  "epoch": 349,
+  "vicreg-vmx-cifar10": 88.19999695,
+  "vicreg-cifar10": 87.91999817
+}, {
+  "epoch": 350,
+  "vicreg-vmx-cifar10": 88.61999512,
+  "vicreg-cifar10": 87.40999603
+}, {
+  "epoch": 351,
+  "vicreg-vmx-cifar10": 88.11999512,
+  "vicreg-cifar10": 86.69999695
+}, {
+  "epoch": 352,
+  "vicreg-vmx-cifar10": 87.5799942,
+  "vicreg-cifar10": 87.63999939
+}, {
+  "epoch": 353,
+  "vicreg-vmx-cifar10": 88.41999817,
+  "vicreg-cifar10": 86.95999908
+}, {
+  "epoch": 354,
+  "vicreg-vmx-cifar10": 87.93000031,
+  "vicreg-cifar10": 87.25999451
+}, {
+  "epoch": 355,
+  "vicreg-vmx-cifar10": 86.87999725,
+  "vicreg-cifar10": 86.44999695
+}, {
+  "epoch": 356,
+  "vicreg-vmx-cifar10": 88.15999603,
+  "vicreg-cifar10": 86.88999939
+}, {
+  "epoch": 357,
+  "vicreg-vmx-cifar10": 87.95999908,
+  "vicreg-cifar10": 86.02999878
+}, {
+  "epoch": 358,
+  "vicreg-vmx-cifar10": 88.08999634,
+  "vicreg-cifar10": 85.31999969
+}, {
+  "epoch": 359,
+  "vicreg-vmx-cifar10": 87.97999573,
+  "vicreg-cifar10": 87.43000031
+}, {
+  "epoch": 360,
+  "vicreg-vmx-cifar10": 87.54999542,
+  "vicreg-cifar10": 86
+}, {
+  "epoch": 361,
+  "vicreg-vmx-cifar10": 88.09999847,
+  "vicreg-cifar10": 87.97999573
+}, {
+  "epoch": 362,
+  "vicreg-vmx-cifar10": 88.45999908,
+  "vicreg-cifar10": 87.68000031
+}, {
+  "epoch": 363,
+  "vicreg-vmx-cifar10": 88.3299942,
+  "vicreg-cifar10": 87.70999908
+}, {
+  "epoch": 364,
+  "vicreg-vmx-cifar10": 87.5,
+  "vicreg-cifar10": 87.40999603
+}, {
+  "epoch": 365,
+  "vicreg-vmx-cifar10": 87.3299942,
+  "vicreg-cifar10": 87.09999847
+}, {
+  "epoch": 366,
+  "vicreg-vmx-cifar10": 88.58999634,
+  "vicreg-cifar10": 86.79999542
+}, {
+  "epoch": 367,
+  "vicreg-vmx-cifar10": 88.36999512,
+  "vicreg-cifar10": 86.94999695
+}, {
+  "epoch": 368,
+  "vicreg-vmx-cifar10": 88.68999481,
+  "vicreg-cifar10": 87.40999603
+}, {
+  "epoch": 369,
+  "vicreg-vmx-cifar10": 87.43000031,
+  "vicreg-cifar10": 87.69999695
+}, {
+  "epoch": 370,
+  "vicreg-vmx-cifar10": 88.05999756,
+  "vicreg-cifar10": 87.01999664
+}, {
+  "epoch": 371,
+  "vicreg-vmx-cifar10": 88.55999756,
+  "vicreg-cifar10": 86.77999878
+}, {
+  "epoch": 372,
+  "vicreg-vmx-cifar10": 88.20999908,
+  "vicreg-cifar10": 86.59999847
+}, {
+  "epoch": 373,
+  "vicreg-vmx-cifar10": 88.68999481,
+  "vicreg-cifar10": 88.05999756
+}, {
+  "epoch": 374,
+  "vicreg-vmx-cifar10": 88.04000092,
+  "vicreg-cifar10": 88.01999664
+}, {
+  "epoch": 375,
+  "vicreg-vmx-cifar10": 87.04999542,
+  "vicreg-cifar10": 86.0799942
+}, {
+  "epoch": 376,
+  "vicreg-vmx-cifar10": 87.75,
+  "vicreg-cifar10": 87.08999634
+}, {
+  "epoch": 377,
+  "vicreg-vmx-cifar10": 87.13999939,
+  "vicreg-cifar10": 86.95999908
+}, {
+  "epoch": 378,
+  "vicreg-vmx-cifar10": 88.00999451,
+  "vicreg-cifar10": 87.81999969
+}, {
+  "epoch": 379,
+  "vicreg-vmx-cifar10": 86.80999756,
+  "vicreg-cifar10": 87.30999756
+}, {
+  "epoch": 380,
+  "vicreg-vmx-cifar10": 87.66999817,
+  "vicreg-cifar10": 87.13999939
+}, {
+  "epoch": 381,
+  "vicreg-vmx-cifar10": 88.43999481,
+  "vicreg-cifar10": 87.50999451
+}, {
+  "epoch": 382,
+  "vicreg-vmx-cifar10": 88.65000153,
+  "vicreg-cifar10": 87.83999634
+}, {
+  "epoch": 383,
+  "vicreg-vmx-cifar10": 88.22999573,
+  "vicreg-cifar10": 87.09999847
+}, {
+  "epoch": 384,
+  "vicreg-vmx-cifar10": 87.5,
+  "vicreg-cifar10": 87.38999939
+}, {
+  "epoch": 385,
+  "vicreg-vmx-cifar10": 87.91999817,
+  "vicreg-cifar10": 86.0799942
+}, {
+  "epoch": 386,
+  "vicreg-vmx-cifar10": 88.38999939,
+  "vicreg-cifar10": 86.63999939
+}, {
+  "epoch": 387,
+  "vicreg-vmx-cifar10": 88.43999481,
+  "vicreg-cifar10": 87.80999756
+}, {
+  "epoch": 388,
+  "vicreg-vmx-cifar10": 88.58999634,
+  "vicreg-cifar10": 88.20999908
+}, {
+  "epoch": 389,
+  "vicreg-vmx-cifar10": 87.69999695,
+  "vicreg-cifar10": 87.40000153
+}, {
+  "epoch": 390,
+  "vicreg-vmx-cifar10": 87.8299942,
+  "vicreg-cifar10": 87.51999664
+}, {
+  "epoch": 391,
+  "vicreg-vmx-cifar10": 88.16999817,
+  "vicreg-cifar10": 87.72000122
+}, {
+  "epoch": 392,
+  "vicreg-vmx-cifar10": 89.00999451,
+  "vicreg-cifar10": 87.11999512
+}, {
+  "epoch": 393,
+  "vicreg-vmx-cifar10": 87.43999481,
+  "vicreg-cifar10": 88.54999542
+}, {
+  "epoch": 394,
+  "vicreg-vmx-cifar10": 85.97999573,
+  "vicreg-cifar10": 87.18999481
+}, {
+  "epoch": 395,
+  "vicreg-vmx-cifar10": 89.16999817,
+  "vicreg-cifar10": 87.43000031
+}, {
+  "epoch": 396,
+  "vicreg-vmx-cifar10": 88.69999695,
+  "vicreg-cifar10": 87.72000122
+}, {
+  "epoch": 397,
+  "vicreg-vmx-cifar10": 88.47999573,
+  "vicreg-cifar10": 87.13999939
+}, {
+  "epoch": 398,
+  "vicreg-vmx-cifar10": 87.90000153,
+  "vicreg-cifar10": 87.09999847
+}, {
+  "epoch": 399,
+  "vicreg-vmx-cifar10": 87.79999542,
+  "vicreg-cifar10": 87.72999573
+}, {
+  "epoch": 400,
+  "vicreg-vmx-cifar10": 88.54000092,
+  "vicreg-cifar10": 87.97999573
+}, {
+  "epoch": 401,
+  "vicreg-vmx-cifar10": 87.75,
+  "vicreg-cifar10": 87.29999542
+}, {
+  "epoch": 402,
+  "vicreg-vmx-cifar10": 88.18999481,
+  "vicreg-cifar10": 86.75999451
+}, {
+  "epoch": 403,
+  "vicreg-vmx-cifar10": 88.62999725,
+  "vicreg-cifar10": 87.91999817
+}, {
+  "epoch": 404,
+  "vicreg-vmx-cifar10": 87.5,
+  "vicreg-cifar10": 87.75
+}, {
+  "epoch": 405,
+  "vicreg-vmx-cifar10": 88.55999756,
+  "vicreg-cifar10": 86.31999969
+}, {
+  "epoch": 406,
+  "vicreg-vmx-cifar10": 88.73999786,
+  "vicreg-cifar10": 87.52999878
+}, {
+  "epoch": 407,
+  "vicreg-vmx-cifar10": 88.11000061,
+  "vicreg-cifar10": 87.50999451
+}, {
+  "epoch": 408,
+  "vicreg-vmx-cifar10": 88.72999573,
+  "vicreg-cifar10": 86.36999512
+}, {
+  "epoch": 409,
+  "vicreg-vmx-cifar10": 87.73999786,
+  "vicreg-cifar10": 87.90000153
+}, {
+  "epoch": 410,
+  "vicreg-vmx-cifar10": 87.70999908,
+  "vicreg-cifar10": 86.97000122
+}, {
+  "epoch": 411,
+  "vicreg-vmx-cifar10": 88.61000061,
+  "vicreg-cifar10": 85.54000092
+}, {
+  "epoch": 412,
+  "vicreg-vmx-cifar10": 87.90999603,
+  "vicreg-cifar10": 86.65999603
+}, {
+  "epoch": 413,
+  "vicreg-vmx-cifar10": 88.65000153,
+  "vicreg-cifar10": 86.94999695
+}, {
+  "epoch": 414,
+  "vicreg-vmx-cifar10": 88.80999756,
+  "vicreg-cifar10": 87.23999786
+}, {
+  "epoch": 415,
+  "vicreg-vmx-cifar10": 87.79999542,
+  "vicreg-cifar10": 87.66999817
+}, {
+  "epoch": 416,
+  "vicreg-vmx-cifar10": 89.16999817,
+  "vicreg-cifar10": 87.93999481
+}, {
+  "epoch": 417,
+  "vicreg-vmx-cifar10": 87.47999573,
+  "vicreg-cifar10": 87.31999969
+}, {
+  "epoch": 418,
+  "vicreg-vmx-cifar10": 88.77999878,
+  "vicreg-cifar10": 88.22999573
+}, {
+  "epoch": 419,
+  "vicreg-vmx-cifar10": 88.59999847,
+  "vicreg-cifar10": 87.33999634
+}, {
+  "epoch": 420,
+  "vicreg-vmx-cifar10": 88.58999634,
+  "vicreg-cifar10": 88.13999939
+}, {
+  "epoch": 421,
+  "vicreg-vmx-cifar10": 88.04000092,
+  "vicreg-cifar10": 87.68999481
+}, {
+  "epoch": 422,
+  "vicreg-vmx-cifar10": 88.0799942,
+  "vicreg-cifar10": 87.97000122
+}, {
+  "epoch": 423,
+  "vicreg-vmx-cifar10": 88.3299942,
+  "vicreg-cifar10": 87.86000061
+}, {
+  "epoch": 424,
+  "vicreg-vmx-cifar10": 88.8299942,
+  "vicreg-cifar10": 87.93000031
+}, {
+  "epoch": 425,
+  "vicreg-vmx-cifar10": 88.65999603,
+  "vicreg-cifar10": 87.93999481
+}, {
+  "epoch": 426,
+  "vicreg-vmx-cifar10": 87.51999664,
+  "vicreg-cifar10": 88.11999512
+}, {
+  "epoch": 427,
+  "vicreg-vmx-cifar10": 88.09999847,
+  "vicreg-cifar10": 88.00999451
+}, {
+  "epoch": 428,
+  "vicreg-vmx-cifar10": 88.80999756,
+  "vicreg-cifar10": 88.04999542
+}, {
+  "epoch": 429,
+  "vicreg-vmx-cifar10": 88.18000031,
+  "vicreg-cifar10": 88.00999451
+}, {
+  "epoch": 430,
+  "vicreg-vmx-cifar10": 88.61000061,
+  "vicreg-cifar10": 87.41999817
+}, {
+  "epoch": 431,
+  "vicreg-vmx-cifar10": 88.80999756,
+  "vicreg-cifar10": 87.40000153
+}, {
+  "epoch": 432,
+  "vicreg-vmx-cifar10": 88.75,
+  "vicreg-cifar10": 88.59999847
+}, {
+  "epoch": 433,
+  "vicreg-vmx-cifar10": 89.11999512,
+  "vicreg-cifar10": 87.93999481
+}, {
+  "epoch": 434,
+  "vicreg-vmx-cifar10": 87.70999908,
+  "vicreg-cifar10": 88.72000122
+}, {
+  "epoch": 435,
+  "vicreg-vmx-cifar10": 88.61000061,
+  "vicreg-cifar10": 87.38999939
+}, {
+  "epoch": 436,
+  "vicreg-vmx-cifar10": 88.06999969,
+  "vicreg-cifar10": 87.97999573
+}, {
+  "epoch": 437,
+  "vicreg-vmx-cifar10": 88.86999512,
+  "vicreg-cifar10": 88.02999878
+}, {
+  "epoch": 438,
+  "vicreg-vmx-cifar10": 88.5,
+  "vicreg-cifar10": 87.75999451
+}, {
+  "epoch": 439,
+  "vicreg-vmx-cifar10": 89.04999542,
+  "vicreg-cifar10": 88.19999695
+}, {
+  "epoch": 440,
+  "vicreg-vmx-cifar10": 88.41999817,
+  "vicreg-cifar10": 87.61000061
+}, {
+  "epoch": 441,
+  "vicreg-vmx-cifar10": 87.43000031,
+  "vicreg-cifar10": 88.11000061
+}, {
+  "epoch": 442,
+  "vicreg-vmx-cifar10": 89.88999939,
+  "vicreg-cifar10": 87.97000122
+}, {
+  "epoch": 443,
+  "vicreg-vmx-cifar10": 89.38999939,
+  "vicreg-cifar10": 87.3299942
+}, {
+  "epoch": 444,
+  "vicreg-vmx-cifar10": 88.66999817,
+  "vicreg-cifar10": 88.26999664
+}, {
+  "epoch": 445,
+  "vicreg-vmx-cifar10": 88.93999481,
+  "vicreg-cifar10": 88.13999939
+}, {
+  "epoch": 446,
+  "vicreg-vmx-cifar10": 88.43000031,
+  "vicreg-cifar10": 85.98999786
+}, {
+  "epoch": 447,
+  "vicreg-vmx-cifar10": 88.47000122,
+  "vicreg-cifar10": 85.80999756
+}, {
+  "epoch": 448,
+  "vicreg-vmx-cifar10": 88.58999634,
+  "vicreg-cifar10": 87.45999908
+}, {
+  "epoch": 449,
+  "vicreg-vmx-cifar10": 87.77999878,
+  "vicreg-cifar10": 87.75999451
+}, {
+  "epoch": 450,
+  "vicreg-vmx-cifar10": 88.51999664,
+  "vicreg-cifar10": 88.31999969
+}, {
+  "epoch": 451,
+  "vicreg-vmx-cifar10": 89.11999512,
+  "vicreg-cifar10": 88.05999756
+}, {
+  "epoch": 452,
+  "vicreg-vmx-cifar10": 88.58999634,
+  "vicreg-cifar10": 86.91999817
+}, {
+  "epoch": 453,
+  "vicreg-vmx-cifar10": 89.79000092,
+  "vicreg-cifar10": 87.84999847
+}, {
+  "epoch": 454,
+  "vicreg-vmx-cifar10": 89.19999695,
+  "vicreg-cifar10": 87.31999969
+}, {
+  "epoch": 455,
+  "vicreg-vmx-cifar10": 88.88999939,
+  "vicreg-cifar10": 87.86000061
+}, {
+  "epoch": 456,
+  "vicreg-vmx-cifar10": 88.33999634,
+  "vicreg-cifar10": 87.48999786
+}, {
+  "epoch": 457,
+  "vicreg-vmx-cifar10": 89.08999634,
+  "vicreg-cifar10": 88.22999573
+}, {
+  "epoch": 458,
+  "vicreg-vmx-cifar10": 88.79999542,
+  "vicreg-cifar10": 87.34999847
+}, {
+  "epoch": 459,
+  "vicreg-vmx-cifar10": 87.76999664,
+  "vicreg-cifar10": 87.77999878
+}, {
+  "epoch": 460,
+  "vicreg-vmx-cifar10": 88.75,
+  "vicreg-cifar10": 87.48999786
+}, {
+  "epoch": 461,
+  "vicreg-vmx-cifar10": 89.36000061,
+  "vicreg-cifar10": 88.37999725
+}, {
+  "epoch": 462,
+  "vicreg-vmx-cifar10": 88.18999481,
+  "vicreg-cifar10": 87.59999847
+}, {
+  "epoch": 463,
+  "vicreg-vmx-cifar10": 88.47999573,
+  "vicreg-cifar10": 88.29999542
+}, {
+  "epoch": 464,
+  "vicreg-vmx-cifar10": 88.65999603,
+  "vicreg-cifar10": 87.55999756
+}, {
+  "epoch": 465,
+  "vicreg-vmx-cifar10": 88.93000031,
+  "vicreg-cifar10": 87.93999481
+}, {
+  "epoch": 466,
+  "vicreg-vmx-cifar10": 89.23999786,
+  "vicreg-cifar10": 87.81999969
+}, {
+  "epoch": 467,
+  "vicreg-vmx-cifar10": 88.37999725,
+  "vicreg-cifar10": 88.18999481
+}, {
+  "epoch": 468,
+  "vicreg-vmx-cifar10": 89.47999573,
+  "vicreg-cifar10": 87.15999603
+}, {
+  "epoch": 469,
+  "vicreg-vmx-cifar10": 88.86999512,
+  "vicreg-cifar10": 87.73999786
+}, {
+  "epoch": 470,
+  "vicreg-vmx-cifar10": 89.61000061,
+  "vicreg-cifar10": 87.86000061
+}, {
+  "epoch": 471,
+  "vicreg-vmx-cifar10": 89.5799942,
+  "vicreg-cifar10": 88.34999847
+}, {
+  "epoch": 472,
+  "vicreg-vmx-cifar10": 89.15000153,
+  "vicreg-cifar10": 87.91999817
+}, {
+  "epoch": 473,
+  "vicreg-vmx-cifar10": 88.91999817,
+  "vicreg-cifar10": 87.30999756
+}, {
+  "epoch": 474,
+  "vicreg-vmx-cifar10": 88.36000061,
+  "vicreg-cifar10": 87.36999512
+}, {
+  "epoch": 475,
+  "vicreg-vmx-cifar10": 89.00999451,
+  "vicreg-cifar10": 88.5
+}, {
+  "epoch": 476,
+  "vicreg-vmx-cifar10": 89.70999908,
+  "vicreg-cifar10": 87.79999542
+}, {
+  "epoch": 477,
+  "vicreg-vmx-cifar10": 89.65999603,
+  "vicreg-cifar10": 87.79000092
+}, {
+  "epoch": 478,
+  "vicreg-vmx-cifar10": 90.22000122,
+  "vicreg-cifar10": 86.5
+}, {
+  "epoch": 479,
+  "vicreg-vmx-cifar10": 86.54999542,
+  "vicreg-cifar10": 87.58999634
+}, {
+  "epoch": 480,
+  "vicreg-vmx-cifar10": 89.04000092,
+  "vicreg-cifar10": 88.29999542
+}, {
+  "epoch": 481,
+  "vicreg-vmx-cifar10": 88.97000122,
+  "vicreg-cifar10": 88.11999512
+}, {
+  "epoch": 482,
+  "vicreg-vmx-cifar10": 88.30999756,
+  "vicreg-cifar10": 88.01999664
+}, {
+  "epoch": 483,
+  "vicreg-vmx-cifar10": 88.43000031,
+  "vicreg-cifar10": 88.06999969
+}, {
+  "epoch": 484,
+  "vicreg-vmx-cifar10": 89.5799942,
+  "vicreg-cifar10": 88.0799942
+}, {
+  "epoch": 485,
+  "vicreg-vmx-cifar10": 89.73999786,
+  "vicreg-cifar10": 87.87999725
+}, {
+  "epoch": 486,
+  "vicreg-vmx-cifar10": 88.86999512,
+  "vicreg-cifar10": 88.31999969
+}, {
+  "epoch": 487,
+  "vicreg-vmx-cifar10": 88.95999908,
+  "vicreg-cifar10": 88.51999664
+}, {
+  "epoch": 488,
+  "vicreg-vmx-cifar10": 89.36999512,
+  "vicreg-cifar10": 88.61999512
+}, {
+  "epoch": 489,
+  "vicreg-vmx-cifar10": 88.98999786,
+  "vicreg-cifar10": 88.15999603
+}, {
+  "epoch": 490,
+  "vicreg-vmx-cifar10": 89.3299942,
+  "vicreg-cifar10": 88.83999634
+}, {
+  "epoch": 491,
+  "vicreg-vmx-cifar10": 89.52999878,
+  "vicreg-cifar10": 87.54000092
+}, {
+  "epoch": 492,
+  "vicreg-vmx-cifar10": 89.90000153,
+  "vicreg-cifar10": 88.06999969
+}, {
+  "epoch": 493,
+  "vicreg-vmx-cifar10": 89.29000092,
+  "vicreg-cifar10": 87.69999695
+}, {
+  "epoch": 494,
+  "vicreg-vmx-cifar10": 87.83999634,
+  "vicreg-cifar10": 87.19999695
+}, {
+  "epoch": 495,
+  "vicreg-vmx-cifar10": 89.04000092,
+  "vicreg-cifar10": 88.13999939
+}, {
+  "epoch": 496,
+  "vicreg-vmx-cifar10": 88.29000092,
+  "vicreg-cifar10": 88.72000122
+}, {
+  "epoch": 497,
+  "vicreg-vmx-cifar10": 89.50999451,
+  "vicreg-cifar10": 87.38999939
+}, {
+  "epoch": 498,
+  "vicreg-vmx-cifar10": 89.22000122,
+  "vicreg-cifar10": 88.15999603
+}, {
+  "epoch": 499,
+  "vicreg-vmx-cifar10": 88.77999878,
+  "vicreg-cifar10": 87.5799942
+}, {
+  "epoch": 500,
+  "vicreg-vmx-cifar10": 89.31999969,
+  "vicreg-cifar10": 88.59999847
+}, {
+  "epoch": 501,
+  "vicreg-vmx-cifar10": 90.00999451,
+  "vicreg-cifar10": 87.75999451
+}, {
+  "epoch": 502,
+  "vicreg-vmx-cifar10": 88.79999542,
+  "vicreg-cifar10": 88.06999969
+}, {
+  "epoch": 503,
+  "vicreg-vmx-cifar10": 88.09999847,
+  "vicreg-cifar10": 88.29999542
+}, {
+  "epoch": 504,
+  "vicreg-vmx-cifar10": 88.66999817,
+  "vicreg-cifar10": 88.19999695
+}, {
+  "epoch": 505,
+  "vicreg-vmx-cifar10": 90.0799942,
+  "vicreg-cifar10": 88.27999878
+}, {
+  "epoch": 506,
+  "vicreg-vmx-cifar10": 88.72000122,
+  "vicreg-cifar10": 86.91999817
+}, {
+  "epoch": 507,
+  "vicreg-vmx-cifar10": 89.68000031,
+  "vicreg-cifar10": 88.29000092
+}, {
+  "epoch": 508,
+  "vicreg-vmx-cifar10": 89.36000061,
+  "vicreg-cifar10": 88.47000122
+}, {
+  "epoch": 509,
+  "vicreg-vmx-cifar10": 89.68000031,
+  "vicreg-cifar10": 88.94999695
+}, {
+  "epoch": 510,
+  "vicreg-vmx-cifar10": 89.97000122,
+  "vicreg-cifar10": 87.80999756
+}, {
+  "epoch": 511,
+  "vicreg-vmx-cifar10": 89.34999847,
+  "vicreg-cifar10": 87.77999878
+}, {
+  "epoch": 512,
+  "vicreg-vmx-cifar10": 88.55999756,
+  "vicreg-cifar10": 88.59999847
+}, {
+  "epoch": 513,
+  "vicreg-vmx-cifar10": 89.3299942,
+  "vicreg-cifar10": 87.41999817
+}, {
+  "epoch": 514,
+  "vicreg-vmx-cifar10": 89.25999451,
+  "vicreg-cifar10": 87.68000031
+}, {
+  "epoch": 515,
+  "vicreg-vmx-cifar10": 89.51999664,
+  "vicreg-cifar10": 88.50999451
+}, {
+  "epoch": 516,
+  "vicreg-vmx-cifar10": 89.25,
+  "vicreg-cifar10": 87.94999695
+}, {
+  "epoch": 517,
+  "vicreg-vmx-cifar10": 89.44999695,
+  "vicreg-cifar10": 87.95999908
+}, {
+  "epoch": 518,
+  "vicreg-vmx-cifar10": 89.65000153,
+  "vicreg-cifar10": 88.3299942
+}, {
+  "epoch": 519,
+  "vicreg-vmx-cifar10": 89.86999512,
+  "vicreg-cifar10": 87.72000122
+}, {
+  "epoch": 520,
+  "vicreg-vmx-cifar10": 89.40000153,
+  "vicreg-cifar10": 87.40000153
+}, {
+  "epoch": 521,
+  "vicreg-vmx-cifar10": 89.43999481,
+  "vicreg-cifar10": 88.70999908
+}, {
+  "epoch": 522,
+  "vicreg-vmx-cifar10": 89.18000031,
+  "vicreg-cifar10": 88.54999542
+}, {
+  "epoch": 523,
+  "vicreg-vmx-cifar10": 89.04999542,
+  "vicreg-cifar10": 87.97000122
+}, {
+  "epoch": 524,
+  "vicreg-vmx-cifar10": 88.26999664,
+  "vicreg-cifar10": 88.18999481
+}, {
+  "epoch": 525,
+  "vicreg-vmx-cifar10": 87.23999786,
+  "vicreg-cifar10": 87.84999847
+}, {
+  "epoch": 526,
+  "vicreg-vmx-cifar10": 88.40999603,
+  "vicreg-cifar10": 88.34999847
+}, {
+  "epoch": 527,
+  "vicreg-vmx-cifar10": 90.08999634,
+  "vicreg-cifar10": 88.02999878
+}, {
+  "epoch": 528,
+  "vicreg-vmx-cifar10": 90.37999725,
+  "vicreg-cifar10": 88.16999817
+}, {
+  "epoch": 529,
+  "vicreg-vmx-cifar10": 89.47999573,
+  "vicreg-cifar10": 87.0799942
+}, {
+  "epoch": 530,
+  "vicreg-vmx-cifar10": 89.18999481,
+  "vicreg-cifar10": 88.43000031
+}, {
+  "epoch": 531,
+  "vicreg-vmx-cifar10": 89.8299942,
+  "vicreg-cifar10": 87.23999786
+}, {
+  "epoch": 532,
+  "vicreg-vmx-cifar10": 89.98999786,
+  "vicreg-cifar10": 88.58999634
+}, {
+  "epoch": 533,
+  "vicreg-vmx-cifar10": 90.11999512,
+  "vicreg-cifar10": 88.94999695
+}, {
+  "epoch": 534,
+  "vicreg-vmx-cifar10": 89.18999481,
+  "vicreg-cifar10": 88.65000153
+}, {
+  "epoch": 535,
+  "vicreg-vmx-cifar10": 89.25999451,
+  "vicreg-cifar10": 88.8299942
+}, {
+  "epoch": 536,
+  "vicreg-vmx-cifar10": 89.41999817,
+  "vicreg-cifar10": 88.72999573
+}, {
+  "epoch": 537,
+  "vicreg-vmx-cifar10": 89.36000061,
+  "vicreg-cifar10": 88.86000061
+}, {
+  "epoch": 538,
+  "vicreg-vmx-cifar10": 89.97000122,
+  "vicreg-cifar10": 88.37999725
+}, {
+  "epoch": 539,
+  "vicreg-vmx-cifar10": 89.84999847,
+  "vicreg-cifar10": 89.44999695
+}, {
+  "epoch": 540,
+  "vicreg-vmx-cifar10": 89.05999756,
+  "vicreg-cifar10": 88.93999481
+}, {
+  "epoch": 541,
+  "vicreg-vmx-cifar10": 89.54999542,
+  "vicreg-cifar10": 88.90999603
+}, {
+  "epoch": 542,
+  "vicreg-vmx-cifar10": 90.16999817,
+  "vicreg-cifar10": 88.5
+}, {
+  "epoch": 543,
+  "vicreg-vmx-cifar10": 89.23999786,
+  "vicreg-cifar10": 88.11999512
+}, {
+  "epoch": 544,
+  "vicreg-vmx-cifar10": 89.59999847,
+  "vicreg-cifar10": 88.91999817
+}, {
+  "epoch": 545,
+  "vicreg-vmx-cifar10": 89.79999542,
+  "vicreg-cifar10": 88.31999969
+}, {
+  "epoch": 546,
+  "vicreg-vmx-cifar10": 89.76999664,
+  "vicreg-cifar10": 88.5
+}, {
+  "epoch": 547,
+  "vicreg-vmx-cifar10": 89.90000153,
+  "vicreg-cifar10": 88.68000031
+}, {
+  "epoch": 548,
+  "vicreg-vmx-cifar10": 89.59999847,
+  "vicreg-cifar10": 87.44999695
+}, {
+  "epoch": 549,
+  "vicreg-vmx-cifar10": 89.91999817,
+  "vicreg-cifar10": 88.18000031
+}, {
+  "epoch": 550,
+  "vicreg-vmx-cifar10": 89.38999939,
+  "vicreg-cifar10": 88.97000122
+}, {
+  "epoch": 551,
+  "vicreg-vmx-cifar10": 89.76999664,
+  "vicreg-cifar10": 88.29999542
+}, {
+  "epoch": 552,
+  "vicreg-vmx-cifar10": 89.69999695,
+  "vicreg-cifar10": 88.68000031
+}, {
+  "epoch": 553,
+  "vicreg-vmx-cifar10": 89.66999817,
+  "vicreg-cifar10": 89.29999542
+}, {
+  "epoch": 554,
+  "vicreg-vmx-cifar10": 90.16999817,
+  "vicreg-cifar10": 88.88999939
+}, {
+  "epoch": 555,
+  "vicreg-vmx-cifar10": 89.72999573,
+  "vicreg-cifar10": 88.48999786
+}, {
+  "epoch": 556,
+  "vicreg-vmx-cifar10": 90.38999939,
+  "vicreg-cifar10": 88.47999573
+}, {
+  "epoch": 557,
+  "vicreg-vmx-cifar10": 89.63999939,
+  "vicreg-cifar10": 88.79999542
+}, {
+  "epoch": 558,
+  "vicreg-vmx-cifar10": 90.05999756,
+  "vicreg-cifar10": 88.72000122
+}, {
+  "epoch": 559,
+  "vicreg-vmx-cifar10": 90.26999664,
+  "vicreg-cifar10": 89.18999481
+}, {
+  "epoch": 560,
+  "vicreg-vmx-cifar10": 90.02999878,
+  "vicreg-cifar10": 88.65999603
+}, {
+  "epoch": 561,
+  "vicreg-vmx-cifar10": 89.98999786,
+  "vicreg-cifar10": 89.13999939
+}, {
+  "epoch": 562,
+  "vicreg-vmx-cifar10": 90.09999847,
+  "vicreg-cifar10": 89.20999908
+}, {
+  "epoch": 563,
+  "vicreg-vmx-cifar10": 90.12999725,
+  "vicreg-cifar10": 89.29999542
+}, {
+  "epoch": 564,
+  "vicreg-vmx-cifar10": 89.93000031,
+  "vicreg-cifar10": 87.5799942
+}, {
+  "epoch": 565,
+  "vicreg-vmx-cifar10": 89.72999573,
+  "vicreg-cifar10": 87.54000092
+}, {
+  "epoch": 566,
+  "vicreg-vmx-cifar10": 89.86000061,
+  "vicreg-cifar10": 89.00999451
+}, {
+  "epoch": 567,
+  "vicreg-vmx-cifar10": 89.79000092,
+  "vicreg-cifar10": 88.61000061
+}, {
+  "epoch": 568,
+  "vicreg-vmx-cifar10": 89.37999725,
+  "vicreg-cifar10": 88.83999634
+}, {
+  "epoch": 569,
+  "vicreg-vmx-cifar10": 89.00999451,
+  "vicreg-cifar10": 88.93000031
+}, {
+  "epoch": 570,
+  "vicreg-vmx-cifar10": 89.59999847,
+  "vicreg-cifar10": 89.18000031
+}, {
+  "epoch": 571,
+  "vicreg-vmx-cifar10": 89.36000061,
+  "vicreg-cifar10": 88.31999969
+}, {
+  "epoch": 572,
+  "vicreg-vmx-cifar10": 90.16999817,
+  "vicreg-cifar10": 89.13999939
+}, {
+  "epoch": 573,
+  "vicreg-vmx-cifar10": 90.45999908,
+  "vicreg-cifar10": 88.48999786
+}, {
+  "epoch": 574,
+  "vicreg-vmx-cifar10": 89.86000061,
+  "vicreg-cifar10": 88.97000122
+}, {
+  "epoch": 575,
+  "vicreg-vmx-cifar10": 89.18999481,
+  "vicreg-cifar10": 88.79000092
+}, {
+  "epoch": 576,
+  "vicreg-vmx-cifar10": 90.43999481,
+  "vicreg-cifar10": 89.3299942
+}, {
+  "epoch": 577,
+  "vicreg-vmx-cifar10": 90.01999664,
+  "vicreg-cifar10": 89.04999542
+}, {
+  "epoch": 578,
+  "vicreg-vmx-cifar10": 90.70999908,
+  "vicreg-cifar10": 88.25
+}, {
+  "epoch": 579,
+  "vicreg-vmx-cifar10": 90.66999817,
+  "vicreg-cifar10": 88.62999725
+}, {
+  "epoch": 580,
+  "vicreg-vmx-cifar10": 89.25,
+  "vicreg-cifar10": 89.48999786
+}, {
+  "epoch": 581,
+  "vicreg-vmx-cifar10": 89.43999481,
+  "vicreg-cifar10": 88.84999847
+}, {
+  "epoch": 582,
+  "vicreg-vmx-cifar10": 89.51999664,
+  "vicreg-cifar10": 88.43000031
+}, {
+  "epoch": 583,
+  "vicreg-vmx-cifar10": 89.5799942,
+  "vicreg-cifar10": 87.8299942
+}, {
+  "epoch": 584,
+  "vicreg-vmx-cifar10": 90.47999573,
+  "vicreg-cifar10": 88.76999664
+}, {
+  "epoch": 585,
+  "vicreg-vmx-cifar10": 90.15999603,
+  "vicreg-cifar10": 88.81999969
+}, {
+  "epoch": 586,
+  "vicreg-vmx-cifar10": 89.36000061,
+  "vicreg-cifar10": 89.48999786
+}, {
+  "epoch": 587,
+  "vicreg-vmx-cifar10": 90.19999695,
+  "vicreg-cifar10": 89.33999634
+}, {
+  "epoch": 588,
+  "vicreg-vmx-cifar10": 89.77999878,
+  "vicreg-cifar10": 89.04000092
+}, {
+  "epoch": 589,
+  "vicreg-vmx-cifar10": 89.23999786,
+  "vicreg-cifar10": 88.97999573
+}, {
+  "epoch": 590,
+  "vicreg-vmx-cifar10": 90.68000031,
+  "vicreg-cifar10": 89.22000122
+}, {
+  "epoch": 591,
+  "vicreg-vmx-cifar10": 89.72999573,
+  "vicreg-cifar10": 89.54999542
+}, {
+  "epoch": 592,
+  "vicreg-vmx-cifar10": 90.13999939,
+  "vicreg-cifar10": 88.88999939
+}, {
+  "epoch": 593,
+  "vicreg-vmx-cifar10": 89.02999878,
+  "vicreg-cifar10": 88.62999725
+}, {
+  "epoch": 594,
+  "vicreg-vmx-cifar10": 90.18999481,
+  "vicreg-cifar10": 89.04999542
+}, {
+  "epoch": 595,
+  "vicreg-vmx-cifar10": 90.45999908,
+  "vicreg-cifar10": 89.02999878
+}, {
+  "epoch": 596,
+  "vicreg-vmx-cifar10": 90,
+  "vicreg-cifar10": 89.25999451
+}, {
+  "epoch": 597,
+  "vicreg-vmx-cifar10": 90.18999481,
+  "vicreg-cifar10": 89.75
+}, {
+  "epoch": 598,
+  "vicreg-vmx-cifar10": 90.01999664,
+  "vicreg-cifar10": 89.83999634
+}, {
+  "epoch": 599,
+  "vicreg-vmx-cifar10": 89.59999847,
+  "vicreg-cifar10": 88.69999695
+}, {
+  "epoch": 600,
+  "vicreg-vmx-cifar10": 90.86000061,
+  "vicreg-cifar10": 88.79999542
+}, {
+  "epoch": 601,
+  "vicreg-vmx-cifar10": 89.41999817,
+  "vicreg-cifar10": 89.08999634
+}, {
+  "epoch": 602,
+  "vicreg-vmx-cifar10": 90.48999786,
+  "vicreg-cifar10": 89.06999969
+}, {
+  "epoch": 603,
+  "vicreg-vmx-cifar10": 90.20999908,
+  "vicreg-cifar10": 88.68000031
+}, {
+  "epoch": 604,
+  "vicreg-vmx-cifar10": 90.41999817,
+  "vicreg-cifar10": 89.45999908
+}, {
+  "epoch": 605,
+  "vicreg-vmx-cifar10": 90.22000122,
+  "vicreg-cifar10": 89.70999908
+}, {
+  "epoch": 606,
+  "vicreg-vmx-cifar10": 90.00999451,
+  "vicreg-cifar10": 88.97999573
+}, {
+  "epoch": 607,
+  "vicreg-vmx-cifar10": 90.37999725,
+  "vicreg-cifar10": 89.04999542
+}, {
+  "epoch": 608,
+  "vicreg-vmx-cifar10": 90.29000092,
+  "vicreg-cifar10": 89.11000061
+}, {
+  "epoch": 609,
+  "vicreg-vmx-cifar10": 90.91999817,
+  "vicreg-cifar10": 89.15999603
+}, {
+  "epoch": 610,
+  "vicreg-vmx-cifar10": 90.97999573,
+  "vicreg-cifar10": 89.54999542
+}, {
+  "epoch": 611,
+  "vicreg-vmx-cifar10": 90.15000153,
+  "vicreg-cifar10": 89.54000092
+}, {
+  "epoch": 612,
+  "vicreg-vmx-cifar10": 90.18999481,
+  "vicreg-cifar10": 89.5
+}, {
+  "epoch": 613,
+  "vicreg-vmx-cifar10": 90.27999878,
+  "vicreg-cifar10": 89.5
+}, {
+  "epoch": 614,
+  "vicreg-vmx-cifar10": 90.52999878,
+  "vicreg-cifar10": 89.22999573
+}, {
+  "epoch": 615,
+  "vicreg-vmx-cifar10": 89.97999573,
+  "vicreg-cifar10": 89.37999725
+}, {
+  "epoch": 616,
+  "vicreg-vmx-cifar10": 91.01999664,
+  "vicreg-cifar10": 89.18999481
+}, {
+  "epoch": 617,
+  "vicreg-vmx-cifar10": 90.02999878,
+  "vicreg-cifar10": 88.97000122
+}, {
+  "epoch": 618,
+  "vicreg-vmx-cifar10": 90.91999817,
+  "vicreg-cifar10": 89.09999847
+}, {
+  "epoch": 619,
+  "vicreg-vmx-cifar10": 89.61000061,
+  "vicreg-cifar10": 88.95999908
+}, {
+  "epoch": 620,
+  "vicreg-vmx-cifar10": 90.86000061,
+  "vicreg-cifar10": 88.75
+}, {
+  "epoch": 621,
+  "vicreg-vmx-cifar10": 90.59999847,
+  "vicreg-cifar10": 89.36999512
+}, {
+  "epoch": 622,
+  "vicreg-vmx-cifar10": 90.81999969,
+  "vicreg-cifar10": 89.19999695
+}, {
+  "epoch": 623,
+  "vicreg-vmx-cifar10": 90.76999664,
+  "vicreg-cifar10": 89.59999847
+}, {
+  "epoch": 624,
+  "vicreg-vmx-cifar10": 90.55999756,
+  "vicreg-cifar10": 89.19999695
+}, {
+  "epoch": 625,
+  "vicreg-vmx-cifar10": 90.29000092,
+  "vicreg-cifar10": 89.15999603
+}, {
+  "epoch": 626,
+  "vicreg-vmx-cifar10": 89.61000061,
+  "vicreg-cifar10": 89.29999542
+}, {
+  "epoch": 627,
+  "vicreg-vmx-cifar10": 90.6499939,
+  "vicreg-cifar10": 89.09999847
+}, {
+  "epoch": 628,
+  "vicreg-vmx-cifar10": 90.51999664,
+  "vicreg-cifar10": 89.00999451
+}, {
+  "epoch": 629,
+  "vicreg-vmx-cifar10": 90.22000122,
+  "vicreg-cifar10": 89.41999817
+}, {
+  "epoch": 630,
+  "vicreg-vmx-cifar10": 89.68000031,
+  "vicreg-cifar10": 89.22000122
+}, {
+  "epoch": 631,
+  "vicreg-vmx-cifar10": 90.37999725,
+  "vicreg-cifar10": 89.12999725
+}, {
+  "epoch": 632,
+  "vicreg-vmx-cifar10": 90,
+  "vicreg-cifar10": 89.68999481
+}, {
+  "epoch": 633,
+  "vicreg-vmx-cifar10": 90.11999512,
+  "vicreg-cifar10": 89.26999664
+}, {
+  "epoch": 634,
+  "vicreg-vmx-cifar10": 89.86000061,
+  "vicreg-cifar10": 89.41999817
+}, {
+  "epoch": 635,
+  "vicreg-vmx-cifar10": 90.61999512,
+  "vicreg-cifar10": 89.51999664
+}, {
+  "epoch": 636,
+  "vicreg-vmx-cifar10": 90.40999603,
+  "vicreg-cifar10": 89.68000031
+}, {
+  "epoch": 637,
+  "vicreg-vmx-cifar10": 90.36000061,
+  "vicreg-cifar10": 89.65999603
+}, {
+  "epoch": 638,
+  "vicreg-vmx-cifar10": 90.33999634,
+  "vicreg-cifar10": 89.73999786
+}, {
+  "epoch": 639,
+  "vicreg-vmx-cifar10": 89.75,
+  "vicreg-cifar10": 89.47000122
+}, {
+  "epoch": 640,
+  "vicreg-vmx-cifar10": 90.90999603,
+  "vicreg-cifar10": 89.04000092
+}, {
+  "epoch": 641,
+  "vicreg-vmx-cifar10": 90.54000092,
+  "vicreg-cifar10": 89.36999512
+}, {
+  "epoch": 642,
+  "vicreg-vmx-cifar10": 90.13999939,
+  "vicreg-cifar10": 89.43000031
+}, {
+  "epoch": 643,
+  "vicreg-vmx-cifar10": 90.5799942,
+  "vicreg-cifar10": 90.12999725
+}, {
+  "epoch": 644,
+  "vicreg-vmx-cifar10": 90.3299942,
+  "vicreg-cifar10": 89.5799942
+}, {
+  "epoch": 645,
+  "vicreg-vmx-cifar10": 90.40000153,
+  "vicreg-cifar10": 89.66999817
+}, {
+  "epoch": 646,
+  "vicreg-vmx-cifar10": 90.45999908,
+  "vicreg-cifar10": 89.3299942
+}, {
+  "epoch": 647,
+  "vicreg-vmx-cifar10": 90.0799942,
+  "vicreg-cifar10": 89.76999664
+}, {
+  "epoch": 648,
+  "vicreg-vmx-cifar10": 90.43000031,
+  "vicreg-cifar10": 88.86000061
+}, {
+  "epoch": 649,
+  "vicreg-vmx-cifar10": 90.44999695,
+  "vicreg-cifar10": 89.40999603
+}, {
+  "epoch": 650,
+  "vicreg-vmx-cifar10": 90.34999847,
+  "vicreg-cifar10": 89.23999786
+}, {
+  "epoch": 651,
+  "vicreg-vmx-cifar10": 90.76999664,
+  "vicreg-cifar10": 89.22999573
+}, {
+  "epoch": 652,
+  "vicreg-vmx-cifar10": 90.88999939,
+  "vicreg-cifar10": 89.58999634
+}, {
+  "epoch": 653,
+  "vicreg-vmx-cifar10": 90,
+  "vicreg-cifar10": 89.58999634
+}, {
+  "epoch": 654,
+  "vicreg-vmx-cifar10": 90.93000031,
+  "vicreg-cifar10": 89.16999817
+}, {
+  "epoch": 655,
+  "vicreg-vmx-cifar10": 89.93000031,
+  "vicreg-cifar10": 88.95999908
+}, {
+  "epoch": 656,
+  "vicreg-vmx-cifar10": 90.48999786,
+  "vicreg-cifar10": 89.59999847
+}, {
+  "epoch": 657,
+  "vicreg-vmx-cifar10": 90.70999908,
+  "vicreg-cifar10": 89.44999695
+}, {
+  "epoch": 658,
+  "vicreg-vmx-cifar10": 91.04000092,
+  "vicreg-cifar10": 89.04999542
+}, {
+  "epoch": 659,
+  "vicreg-vmx-cifar10": 90.86000061,
+  "vicreg-cifar10": 90.09999847
+}, {
+  "epoch": 660,
+  "vicreg-vmx-cifar10": 89.83999634,
+  "vicreg-cifar10": 88.98999786
+}, {
+  "epoch": 661,
+  "vicreg-vmx-cifar10": 90.04999542,
+  "vicreg-cifar10": 89.52999878
+}, {
+  "epoch": 662,
+  "vicreg-vmx-cifar10": 90.54999542,
+  "vicreg-cifar10": 89.68999481
+}, {
+  "epoch": 663,
+  "vicreg-vmx-cifar10": 90.58999634,
+  "vicreg-cifar10": 89.04000092
+}, {
+  "epoch": 664,
+  "vicreg-vmx-cifar10": 90.37999725,
+  "vicreg-cifar10": 89.36999512
+}, {
+  "epoch": 665,
+  "vicreg-vmx-cifar10": 90.98999786,
+  "vicreg-cifar10": 89.52999878
+}, {
+  "epoch": 666,
+  "vicreg-vmx-cifar10": 90.38999939,
+  "vicreg-cifar10": 89.15000153
+}, {
+  "epoch": 667,
+  "vicreg-vmx-cifar10": 89.66999817,
+  "vicreg-cifar10": 89.15999603
+}, {
+  "epoch": 668,
+  "vicreg-vmx-cifar10": 90.8999939,
+  "vicreg-cifar10": 89.81999969
+}, {
+  "epoch": 669,
+  "vicreg-vmx-cifar10": 90.41999817,
+  "vicreg-cifar10": 90.18000031
+}, {
+  "epoch": 670,
+  "vicreg-vmx-cifar10": 91.02999878,
+  "vicreg-cifar10": 89.87999725
+}, {
+  "epoch": 671,
+  "vicreg-vmx-cifar10": 90.43999481,
+  "vicreg-cifar10": 90.04999542
+}, {
+  "epoch": 672,
+  "vicreg-vmx-cifar10": 90.61000061,
+  "vicreg-cifar10": 89.62999725
+}, {
+  "epoch": 673,
+  "vicreg-vmx-cifar10": 90.80999756,
+  "vicreg-cifar10": 89.94999695
+}, {
+  "epoch": 674,
+  "vicreg-vmx-cifar10": 90.5799942,
+  "vicreg-cifar10": 89.04999542
+}, {
+  "epoch": 675,
+  "vicreg-vmx-cifar10": 90.36000061,
+  "vicreg-cifar10": 89.62999725
+}, {
+  "epoch": 676,
+  "vicreg-vmx-cifar10": 90.93000031,
+  "vicreg-cifar10": 90.06999969
+}, {
+  "epoch": 677,
+  "vicreg-vmx-cifar10": 90.72000122,
+  "vicreg-cifar10": 89.68000031
+}, {
+  "epoch": 678,
+  "vicreg-vmx-cifar10": 90.0799942,
+  "vicreg-cifar10": 89.68000031
+}, {
+  "epoch": 679,
+  "vicreg-vmx-cifar10": 90.93999481,
+  "vicreg-cifar10": 89.56999969
+}, {
+  "epoch": 680,
+  "vicreg-vmx-cifar10": 90.8299942,
+  "vicreg-cifar10": 89.68000031
+}, {
+  "epoch": 681,
+  "vicreg-vmx-cifar10": 89.98999786,
+  "vicreg-cifar10": 89.29999542
+}, {
+  "epoch": 682,
+  "vicreg-vmx-cifar10": 89.5,
+  "vicreg-cifar10": 89.76999664
+}, {
+  "epoch": 683,
+  "vicreg-vmx-cifar10": 90.76999664,
+  "vicreg-cifar10": 89.55999756
+}, {
+  "epoch": 684,
+  "vicreg-vmx-cifar10": 91.36000061,
+  "vicreg-cifar10": 89.72999573
+}, {
+  "epoch": 685,
+  "vicreg-vmx-cifar10": 90.18999481,
+  "vicreg-cifar10": 89.87999725
+}, {
+  "epoch": 686,
+  "vicreg-vmx-cifar10": 90.51999664,
+  "vicreg-cifar10": 89.77999878
+}, {
+  "epoch": 687,
+  "vicreg-vmx-cifar10": 90.48999786,
+  "vicreg-cifar10": 89.48999786
+}, {
+  "epoch": 688,
+  "vicreg-vmx-cifar10": 90.66999817,
+  "vicreg-cifar10": 89.41999817
+}, {
+  "epoch": 689,
+  "vicreg-vmx-cifar10": 90.18000031,
+  "vicreg-cifar10": 89.58999634
+}, {
+  "epoch": 690,
+  "vicreg-vmx-cifar10": 90.84999847,
+  "vicreg-cifar10": 89.47999573
+}, {
+  "epoch": 691,
+  "vicreg-vmx-cifar10": 90.72000122,
+  "vicreg-cifar10": 89.69999695
+}, {
+  "epoch": 692,
+  "vicreg-vmx-cifar10": 90.94999695,
+  "vicreg-cifar10": 89.31999969
+}, {
+  "epoch": 693,
+  "vicreg-vmx-cifar10": 90.77999878,
+  "vicreg-cifar10": 89.98999786
+}, {
+  "epoch": 694,
+  "vicreg-vmx-cifar10": 91.12999725,
+  "vicreg-cifar10": 89.87999725
+}, {
+  "epoch": 695,
+  "vicreg-vmx-cifar10": 90.8999939,
+  "vicreg-cifar10": 89.76999664
+}, {
+  "epoch": 696,
+  "vicreg-vmx-cifar10": 91.30999756,
+  "vicreg-cifar10": 89.8299942
+}, {
+  "epoch": 697,
+  "vicreg-vmx-cifar10": 90.97000122,
+  "vicreg-cifar10": 89.51999664
+}, {
+  "epoch": 698,
+  "vicreg-vmx-cifar10": 90.98999786,
+  "vicreg-cifar10": 88.75
+}, {
+  "epoch": 699,
+  "vicreg-vmx-cifar10": 90.97000122,
+  "vicreg-cifar10": 89.43000031
+}, {
+  "epoch": 700,
+  "vicreg-vmx-cifar10": 90.97999573,
+  "vicreg-cifar10": 89.97999573
+}, {
+  "epoch": 701,
+  "vicreg-vmx-cifar10": 90.65999603,
+  "vicreg-cifar10": 89.69999695
+}, {
+  "epoch": 702,
+  "vicreg-vmx-cifar10": 91.47999573,
+  "vicreg-cifar10": 89.59999847
+}, {
+  "epoch": 703,
+  "vicreg-vmx-cifar10": 91.23999786,
+  "vicreg-cifar10": 90.11000061
+}, {
+  "epoch": 704,
+  "vicreg-vmx-cifar10": 91.04999542,
+  "vicreg-cifar10": 89.62999725
+}, {
+  "epoch": 705,
+  "vicreg-vmx-cifar10": 90.52999878,
+  "vicreg-cifar10": 89.79000092
+}, {
+  "epoch": 706,
+  "vicreg-vmx-cifar10": 91.06999969,
+  "vicreg-cifar10": 90.18000031
+}, {
+  "epoch": 707,
+  "vicreg-vmx-cifar10": 91.13999939,
+  "vicreg-cifar10": 89.63999939
+}, {
+  "epoch": 708,
+  "vicreg-vmx-cifar10": 91.04999542,
+  "vicreg-cifar10": 89.93000031
+}, {
+  "epoch": 709,
+  "vicreg-vmx-cifar10": 90.93999481,
+  "vicreg-cifar10": 90.06999969
+}, {
+  "epoch": 710,
+  "vicreg-vmx-cifar10": 91.04999542,
+  "vicreg-cifar10": 89.90000153
+}, {
+  "epoch": 711,
+  "vicreg-vmx-cifar10": 90.73999786,
+  "vicreg-cifar10": 89.81999969
+}, {
+  "epoch": 712,
+  "vicreg-vmx-cifar10": 91.01999664,
+  "vicreg-cifar10": 89.88999939
+}, {
+  "epoch": 713,
+  "vicreg-vmx-cifar10": 90.75999451,
+  "vicreg-cifar10": 89.75999451
+}, {
+  "epoch": 714,
+  "vicreg-vmx-cifar10": 91.1499939,
+  "vicreg-cifar10": 90.11000061
+}, {
+  "epoch": 715,
+  "vicreg-vmx-cifar10": 91.18000031,
+  "vicreg-cifar10": 90.0799942
+}, {
+  "epoch": 716,
+  "vicreg-vmx-cifar10": 91.12999725,
+  "vicreg-cifar10": 90.54000092
+}, {
+  "epoch": 717,
+  "vicreg-vmx-cifar10": 90.86000061,
+  "vicreg-cifar10": 90
+}, {
+  "epoch": 718,
+  "vicreg-vmx-cifar10": 91.36999512,
+  "vicreg-cifar10": 89.86999512
+}, {
+  "epoch": 719,
+  "vicreg-vmx-cifar10": 91.13999939,
+  "vicreg-cifar10": 89.70999908
+}, {
+  "epoch": 720,
+  "vicreg-vmx-cifar10": 91.50999451,
+  "vicreg-cifar10": 90.11999512
+}, {
+  "epoch": 721,
+  "vicreg-vmx-cifar10": 91.51999664,
+  "vicreg-cifar10": 89.77999878
+}, {
+  "epoch": 722,
+  "vicreg-vmx-cifar10": 91.41999817,
+  "vicreg-cifar10": 90.18000031
+}, {
+  "epoch": 723,
+  "vicreg-vmx-cifar10": 91.09999847,
+  "vicreg-cifar10": 89.36999512
+}, {
+  "epoch": 724,
+  "vicreg-vmx-cifar10": 91.11000061,
+  "vicreg-cifar10": 89.72999573
+}, {
+  "epoch": 725,
+  "vicreg-vmx-cifar10": 91.52999878,
+  "vicreg-cifar10": 89.15000153
+}, {
+  "epoch": 726,
+  "vicreg-vmx-cifar10": 90.88999939,
+  "vicreg-cifar10": 89.75
+}, {
+  "epoch": 727,
+  "vicreg-vmx-cifar10": 91.31999969,
+  "vicreg-cifar10": 90.11000061
+}, {
+  "epoch": 728,
+  "vicreg-vmx-cifar10": 91.23999786,
+  "vicreg-cifar10": 89.73999786
+}, {
+  "epoch": 729,
+  "vicreg-vmx-cifar10": 91.3999939,
+  "vicreg-cifar10": 89.73999786
+}, {
+  "epoch": 730,
+  "vicreg-vmx-cifar10": 91.3999939,
+  "vicreg-cifar10": 90.11000061
+}, {
+  "epoch": 731,
+  "vicreg-vmx-cifar10": 91.18000031,
+  "vicreg-cifar10": 89.54000092
+}, {
+  "epoch": 732,
+  "vicreg-vmx-cifar10": 91.50999451,
+  "vicreg-cifar10": 89.58999634
+}, {
+  "epoch": 733,
+  "vicreg-vmx-cifar10": 91.22999573,
+  "vicreg-cifar10": 89.8299942
+}, {
+  "epoch": 734,
+  "vicreg-vmx-cifar10": 91.08999634,
+  "vicreg-cifar10": 89.87999725
+}, {
+  "epoch": 735,
+  "vicreg-vmx-cifar10": 91.5799942,
+  "vicreg-cifar10": 89.72999573
+}, {
+  "epoch": 736,
+  "vicreg-vmx-cifar10": 91.29999542,
+  "vicreg-cifar10": 90.09999847
+}, {
+  "epoch": 737,
+  "vicreg-vmx-cifar10": 91.27999878,
+  "vicreg-cifar10": 89.72000122
+}, {
+  "epoch": 738,
+  "vicreg-vmx-cifar10": 91.18999481,
+  "vicreg-cifar10": 89.29000092
+}, {
+  "epoch": 739,
+  "vicreg-vmx-cifar10": 91.25,
+  "vicreg-cifar10": 89.61999512
+}, {
+  "epoch": 740,
+  "vicreg-vmx-cifar10": 91.29000092,
+  "vicreg-cifar10": 89.95999908
+}, {
+  "epoch": 741,
+  "vicreg-vmx-cifar10": 91.66999817,
+  "vicreg-cifar10": 89.65000153
+}, {
+  "epoch": 742,
+  "vicreg-vmx-cifar10": 91.12999725,
+  "vicreg-cifar10": 89.86999512
+}, {
+  "epoch": 743,
+  "vicreg-vmx-cifar10": 91.23999786,
+  "vicreg-cifar10": 89.63999939
+}, {
+  "epoch": 744,
+  "vicreg-vmx-cifar10": 91.36999512,
+  "vicreg-cifar10": 90.22999573
+}, {
+  "epoch": 745,
+  "vicreg-vmx-cifar10": 91.33999634,
+  "vicreg-cifar10": 89.72999573
+}, {
+  "epoch": 746,
+  "vicreg-vmx-cifar10": 91.29000092,
+  "vicreg-cifar10": 89.00999451
+}, {
+  "epoch": 747,
+  "vicreg-vmx-cifar10": 91.08999634,
+  "vicreg-cifar10": 89.77999878
+}, {
+  "epoch": 748,
+  "vicreg-vmx-cifar10": 91.55999756,
+  "vicreg-cifar10": 89.47999573
+}, {
+  "epoch": 749,
+  "vicreg-vmx-cifar10": 91.36000061,
+  "vicreg-cifar10": 90.16999817
+}, {
+  "epoch": 750,
+  "vicreg-vmx-cifar10": 90.97000122,
+  "vicreg-cifar10": 89.87999725
+}, {
+  "epoch": 751,
+  "vicreg-vmx-cifar10": 91.37999725,
+  "vicreg-cifar10": 89.97999573
+}, {
+  "epoch": 752,
+  "vicreg-vmx-cifar10": 91.19999695,
+  "vicreg-cifar10": 89.68000031
+}, {
+  "epoch": 753,
+  "vicreg-vmx-cifar10": 91.54000092,
+  "vicreg-cifar10": 89.97999573
+}, {
+  "epoch": 754,
+  "vicreg-vmx-cifar10": 90.98999786,
+  "vicreg-cifar10": 89.72999573
+}, {
+  "epoch": 755,
+  "vicreg-vmx-cifar10": 91.54000092,
+  "vicreg-cifar10": 90.34999847
+}, {
+  "epoch": 756,
+  "vicreg-vmx-cifar10": 91.18999481,
+  "vicreg-cifar10": 89.5
+}, {
+  "epoch": 757,
+  "vicreg-vmx-cifar10": 91.72000122,
+  "vicreg-cifar10": 90.25999451
+}, {
+  "epoch": 758,
+  "vicreg-vmx-cifar10": 91.68999481,
+  "vicreg-cifar10": 89.77999878
+}, {
+  "epoch": 759,
+  "vicreg-vmx-cifar10": 91.68999481,
+  "vicreg-cifar10": 89.81999969
+}, {
+  "epoch": 760,
+  "vicreg-vmx-cifar10": 91.20999908,
+  "vicreg-cifar10": 89.83999634
+}, {
+  "epoch": 761,
+  "vicreg-vmx-cifar10": 91.72000122,
+  "vicreg-cifar10": 89.97999573
+}, {
+  "epoch": 762,
+  "vicreg-vmx-cifar10": 91.48999786,
+  "vicreg-cifar10": 90.15999603
+}, {
+  "epoch": 763,
+  "vicreg-vmx-cifar10": 91.22000122,
+  "vicreg-cifar10": 89.69999695
+}, {
+  "epoch": 764,
+  "vicreg-vmx-cifar10": 91.51999664,
+  "vicreg-cifar10": 89.79999542
+}, {
+  "epoch": 765,
+  "vicreg-vmx-cifar10": 91.43999481,
+  "vicreg-cifar10": 89.98999786
+}, {
+  "epoch": 766,
+  "vicreg-vmx-cifar10": 91.04999542,
+  "vicreg-cifar10": 90.23999786
+}, {
+  "epoch": 767,
+  "vicreg-vmx-cifar10": 91.80999756,
+  "vicreg-cifar10": 89.90999603
+}, {
+  "epoch": 768,
+  "vicreg-vmx-cifar10": 91.45999908,
+  "vicreg-cifar10": 89.94999695
+}, {
+  "epoch": 769,
+  "vicreg-vmx-cifar10": 91.56999969,
+  "vicreg-cifar10": 89.75
+}, {
+  "epoch": 770,
+  "vicreg-vmx-cifar10": 91.47999573,
+  "vicreg-cifar10": 90.25999451
+}, {
+  "epoch": 771,
+  "vicreg-vmx-cifar10": 90.6499939,
+  "vicreg-cifar10": 89.70999908
+}, {
+  "epoch": 772,
+  "vicreg-vmx-cifar10": 91.45999908,
+  "vicreg-cifar10": 89.68999481
+}, {
+  "epoch": 773,
+  "vicreg-vmx-cifar10": 91.29000092,
+  "vicreg-cifar10": 90.43999481
+}, {
+  "epoch": 774,
+  "vicreg-vmx-cifar10": 91.08999634,
+  "vicreg-cifar10": 89.97999573
+}, {
+  "epoch": 775,
+  "vicreg-vmx-cifar10": 91.75,
+  "vicreg-cifar10": 90.18000031
+}, {
+  "epoch": 776,
+  "vicreg-vmx-cifar10": 91.38999939,
+  "vicreg-cifar10": 90.15000153
+}, {
+  "epoch": 777,
+  "vicreg-vmx-cifar10": 91.61000061,
+  "vicreg-cifar10": 89.79999542
+}, {
+  "epoch": 778,
+  "vicreg-vmx-cifar10": 91.68999481,
+  "vicreg-cifar10": 90.06999969
+}, {
+  "epoch": 779,
+  "vicreg-vmx-cifar10": 91.54000092,
+  "vicreg-cifar10": 90.08999634
+}, {
+  "epoch": 780,
+  "vicreg-vmx-cifar10": 91.13999939,
+  "vicreg-cifar10": 90.16999817
+}, {
+  "epoch": 781,
+  "vicreg-vmx-cifar10": 91.02999878,
+  "vicreg-cifar10": 90.20999908
+}, {
+  "epoch": 782,
+  "vicreg-vmx-cifar10": 91.59999847,
+  "vicreg-cifar10": 89.58999634
+}, {
+  "epoch": 783,
+  "vicreg-vmx-cifar10": 91.43000031,
+  "vicreg-cifar10": 89.83999634
+}, {
+  "epoch": 784,
+  "vicreg-vmx-cifar10": 91.79000092,
+  "vicreg-cifar10": 90.41999817
+}, {
+  "epoch": 785,
+  "vicreg-vmx-cifar10": 91.52999878,
+  "vicreg-cifar10": 89.76999664
+}, {
+  "epoch": 786,
+  "vicreg-vmx-cifar10": 91.61999512,
+  "vicreg-cifar10": 89.90000153
+}, {
+  "epoch": 787,
+  "vicreg-vmx-cifar10": 91.45999908,
+  "vicreg-cifar10": 90.08999634
+}, {
+  "epoch": 788,
+  "vicreg-vmx-cifar10": 91.58999634,
+  "vicreg-cifar10": 89.80999756
+}, {
+  "epoch": 789,
+  "vicreg-vmx-cifar10": 90.97999573,
+  "vicreg-cifar10": 89.98999786
+}, {
+  "epoch": 790,
+  "vicreg-vmx-cifar10": 91.8299942,
+  "vicreg-cifar10": 90.25999451
+}, {
+  "epoch": 791,
+  "vicreg-vmx-cifar10": 91.59999847,
+  "vicreg-cifar10": 90.04999542
+}, {
+  "epoch": 792,
+  "vicreg-vmx-cifar10": 91.97999573,
+  "vicreg-cifar10": 90.01999664
+}, {
+  "epoch": 793,
+  "vicreg-vmx-cifar10": 91.87999725,
+  "vicreg-cifar10": 89.56999969
+}, {
+  "epoch": 794,
+  "vicreg-vmx-cifar10": 91.48999786,
+  "vicreg-cifar10": 90.02999878
+}, {
+  "epoch": 795,
+  "vicreg-vmx-cifar10": 91.86000061,
+  "vicreg-cifar10": 89.90000153
+}, {
+  "epoch": 796,
+  "vicreg-vmx-cifar10": 91.80999756,
+  "vicreg-cifar10": 89.86000061
+}, {
+  "epoch": 797,
+  "vicreg-vmx-cifar10": 91.47999573,
+  "vicreg-cifar10": 90.09999847
+}, {
+  "epoch": 798,
+  "vicreg-vmx-cifar10": 91.79999542,
+  "vicreg-cifar10": 89.48999786
+}, {
+  "epoch": 799,
+  "vicreg-vmx-cifar10": 92.00999451,
+  "vicreg-cifar10": 89.95999908
+}, {
+  "epoch": 800,
+  "vicreg-vmx-cifar10": 91.66999817,
+  "vicreg-cifar10": 89.95999908
+}, {
+  "epoch": 801,
+  "vicreg-vmx-cifar10": 91.98999786,
+  "vicreg-cifar10": 90.36000061
+}, {
+  "epoch": 802,
+  "vicreg-vmx-cifar10": 91.73999786,
+  "vicreg-cifar10": 89.72000122
+}, {
+  "epoch": 803,
+  "vicreg-vmx-cifar10": 91.86999512,
+  "vicreg-cifar10": 89.70999908
+}, {
+  "epoch": 804,
+  "vicreg-vmx-cifar10": 92.09999847,
+  "vicreg-cifar10": 90.02999878
+}, {
+  "epoch": 805,
+  "vicreg-vmx-cifar10": 91.62999725,
+  "vicreg-cifar10": 90.04999542
+}, {
+  "epoch": 806,
+  "vicreg-vmx-cifar10": 91.72000122,
+  "vicreg-cifar10": 90.22000122
+}, {
+  "epoch": 807,
+  "vicreg-vmx-cifar10": 91.70999908,
+  "vicreg-cifar10": 89.86000061
+}, {
+  "epoch": 808,
+  "vicreg-vmx-cifar10": 91.75999451,
+  "vicreg-cifar10": 90.04999542
+}, {
+  "epoch": 809,
+  "vicreg-vmx-cifar10": 91.69999695,
+  "vicreg-cifar10": 89.88999939
+}, {
+  "epoch": 810,
+  "vicreg-vmx-cifar10": 91.5799942,
+  "vicreg-cifar10": 90.79999542
+}, {
+  "epoch": 811,
+  "vicreg-vmx-cifar10": 92.04999542,
+  "vicreg-cifar10": 89.90999603
+}, {
+  "epoch": 812,
+  "vicreg-vmx-cifar10": 91.61999512,
+  "vicreg-cifar10": 90.25
+}, {
+  "epoch": 813,
+  "vicreg-vmx-cifar10": 91.51999664,
+  "vicreg-cifar10": 90.43000031
+}, {
+  "epoch": 814,
+  "vicreg-vmx-cifar10": 91.55999756,
+  "vicreg-cifar10": 90.20999908
+}, {
+  "epoch": 815,
+  "vicreg-vmx-cifar10": 91.31999969,
+  "vicreg-cifar10": 90.0799942
+}, {
+  "epoch": 816,
+  "vicreg-vmx-cifar10": 91.80999756,
+  "vicreg-cifar10": 90.19999695
+}, {
+  "epoch": 817,
+  "vicreg-vmx-cifar10": 91.87999725,
+  "vicreg-cifar10": 90.18000031
+}, {
+  "epoch": 818,
+  "vicreg-vmx-cifar10": 91.76999664,
+  "vicreg-cifar10": 90.34999847
+}, {
+  "epoch": 819,
+  "vicreg-vmx-cifar10": 91.63999939,
+  "vicreg-cifar10": 90.15000153
+}, {
+  "epoch": 820,
+  "vicreg-vmx-cifar10": 91.88999939,
+  "vicreg-cifar10": 90.11000061
+}, {
+  "epoch": 821,
+  "vicreg-vmx-cifar10": 92.04999542,
+  "vicreg-cifar10": 89.90000153
+}, {
+  "epoch": 822,
+  "vicreg-vmx-cifar10": 91.8299942,
+  "vicreg-cifar10": 90.40999603
+}, {
+  "epoch": 823,
+  "vicreg-vmx-cifar10": 91.76999664,
+  "vicreg-cifar10": 90
+}, {
+  "epoch": 824,
+  "vicreg-vmx-cifar10": 91.75999451,
+  "vicreg-cifar10": 90.56999969
+}, {
+  "epoch": 825,
+  "vicreg-vmx-cifar10": 91.72999573,
+  "vicreg-cifar10": 90.11999512
+}, {
+  "epoch": 826,
+  "vicreg-vmx-cifar10": 92.11000061,
+  "vicreg-cifar10": 90.40000153
+}, {
+  "epoch": 827,
+  "vicreg-vmx-cifar10": 92.02999878,
+  "vicreg-cifar10": 90.13999939
+}, {
+  "epoch": 828,
+  "vicreg-vmx-cifar10": 91.61999512,
+  "vicreg-cifar10": 89.97999573
+}, {
+  "epoch": 829,
+  "vicreg-vmx-cifar10": 91.87999725,
+  "vicreg-cifar10": 89.72999573
+}, {
+  "epoch": 830,
+  "vicreg-vmx-cifar10": 91.86999512,
+  "vicreg-cifar10": 90.26999664
+}, {
+  "epoch": 831,
+  "vicreg-vmx-cifar10": 91.84999847,
+  "vicreg-cifar10": 90.40000153
+}, {
+  "epoch": 832,
+  "vicreg-vmx-cifar10": 91.70999908,
+  "vicreg-cifar10": 90.5799942
+}, {
+  "epoch": 833,
+  "vicreg-vmx-cifar10": 92.04999542,
+  "vicreg-cifar10": 90.33999634
+}, {
+  "epoch": 834,
+  "vicreg-vmx-cifar10": 91.86999512,
+  "vicreg-cifar10": 90.27999878
+}, {
+  "epoch": 835,
+  "vicreg-vmx-cifar10": 91.93000031,
+  "vicreg-cifar10": 90
+}, {
+  "epoch": 836,
+  "vicreg-vmx-cifar10": 92.18000031,
+  "vicreg-cifar10": 90.40999603
+}, {
+  "epoch": 837,
+  "vicreg-vmx-cifar10": 91.88999939,
+  "vicreg-cifar10": 90.31999969
+}, {
+  "epoch": 838,
+  "vicreg-vmx-cifar10": 91.63999939,
+  "vicreg-cifar10": 90.05999756
+}, {
+  "epoch": 839,
+  "vicreg-vmx-cifar10": 92.02999878,
+  "vicreg-cifar10": 90.18999481
+}, {
+  "epoch": 840,
+  "vicreg-vmx-cifar10": 91.72000122,
+  "vicreg-cifar10": 90.56999969
+}, {
+  "epoch": 841,
+  "vicreg-vmx-cifar10": 92.00999451,
+  "vicreg-cifar10": 90.25
+}, {
+  "epoch": 842,
+  "vicreg-vmx-cifar10": 91.76999664,
+  "vicreg-cifar10": 90.43999481
+}, {
+  "epoch": 843,
+  "vicreg-vmx-cifar10": 91.79999542,
+  "vicreg-cifar10": 90.51999664
+}, {
+  "epoch": 844,
+  "vicreg-vmx-cifar10": 91.76999664,
+  "vicreg-cifar10": 90.47000122
+}, {
+  "epoch": 845,
+  "vicreg-vmx-cifar10": 91.73999786,
+  "vicreg-cifar10": 90.22999573
+}, {
+  "epoch": 846,
+  "vicreg-vmx-cifar10": 91.75999451,
+  "vicreg-cifar10": 90.30999756
+}, {
+  "epoch": 847,
+  "vicreg-vmx-cifar10": 91.87999725,
+  "vicreg-cifar10": 90.6499939
+}, {
+  "epoch": 848,
+  "vicreg-vmx-cifar10": 91.80999756,
+  "vicreg-cifar10": 90.54999542
+}, {
+  "epoch": 849,
+  "vicreg-vmx-cifar10": 91.90999603,
+  "vicreg-cifar10": 90.45999908
+}, {
+  "epoch": 850,
+  "vicreg-vmx-cifar10": 91.84999847,
+  "vicreg-cifar10": 90.50999451
+}, {
+  "epoch": 851,
+  "vicreg-vmx-cifar10": 91.87999725,
+  "vicreg-cifar10": 90.45999908
+}, {
+  "epoch": 852,
+  "vicreg-vmx-cifar10": 91.43000031,
+  "vicreg-cifar10": 90.37999725
+}, {
+  "epoch": 853,
+  "vicreg-vmx-cifar10": 92,
+  "vicreg-cifar10": 90.5
+}, {
+  "epoch": 854,
+  "vicreg-vmx-cifar10": 91.80999756,
+  "vicreg-cifar10": 90.61000061
+}, {
+  "epoch": 855,
+  "vicreg-vmx-cifar10": 91.90999603,
+  "vicreg-cifar10": 90.45999908
+}, {
+  "epoch": 856,
+  "vicreg-vmx-cifar10": 91.69999695,
+  "vicreg-cifar10": 90.43000031
+}, {
+  "epoch": 857,
+  "vicreg-vmx-cifar10": 91.76999664,
+  "vicreg-cifar10": 89.97000122
+}, {
+  "epoch": 858,
+  "vicreg-vmx-cifar10": 91.93999481,
+  "vicreg-cifar10": 90.47999573
+}, {
+  "epoch": 859,
+  "vicreg-vmx-cifar10": 91.51999664,
+  "vicreg-cifar10": 90.36000061
+}, {
+  "epoch": 860,
+  "vicreg-vmx-cifar10": 91.84999847,
+  "vicreg-cifar10": 90.36999512
+}, {
+  "epoch": 861,
+  "vicreg-vmx-cifar10": 92.05999756,
+  "vicreg-cifar10": 90.29999542
+}, {
+  "epoch": 862,
+  "vicreg-vmx-cifar10": 92.0799942,
+  "vicreg-cifar10": 90.37999725
+}, {
+  "epoch": 863,
+  "vicreg-vmx-cifar10": 92.0799942,
+  "vicreg-cifar10": 90.34999847
+}, {
+  "epoch": 864,
+  "vicreg-vmx-cifar10": 91.87999725,
+  "vicreg-cifar10": 90.31999969
+}, {
+  "epoch": 865,
+  "vicreg-vmx-cifar10": 91.76999664,
+  "vicreg-cifar10": 90.54999542
+}, {
+  "epoch": 866,
+  "vicreg-vmx-cifar10": 91.87999725,
+  "vicreg-cifar10": 90.54000092
+}, {
+  "epoch": 867,
+  "vicreg-vmx-cifar10": 92.40999603,
+  "vicreg-cifar10": 90.47000122
+}, {
+  "epoch": 868,
+  "vicreg-vmx-cifar10": 92.1499939,
+  "vicreg-cifar10": 90.36999512
+}, {
+  "epoch": 869,
+  "vicreg-vmx-cifar10": 92.1499939,
+  "vicreg-cifar10": 90.30999756
+}, {
+  "epoch": 870,
+  "vicreg-vmx-cifar10": 91.91999817,
+  "vicreg-cifar10": 90.06999969
+}, {
+  "epoch": 871,
+  "vicreg-vmx-cifar10": 92.08999634,
+  "vicreg-cifar10": 90.36999512
+}, {
+  "epoch": 872,
+  "vicreg-vmx-cifar10": 92.02999878,
+  "vicreg-cifar10": 90.27999878
+}, {
+  "epoch": 873,
+  "vicreg-vmx-cifar10": 92.08999634,
+  "vicreg-cifar10": 90.41999817
+}, {
+  "epoch": 874,
+  "vicreg-vmx-cifar10": 92.26999664,
+  "vicreg-cifar10": 90.27999878
+}, {
+  "epoch": 875,
+  "vicreg-vmx-cifar10": 92.25,
+  "vicreg-cifar10": 90.40000153
+}, {
+  "epoch": 876,
+  "vicreg-vmx-cifar10": 92.18000031,
+  "vicreg-cifar10": 90.40000153
+}, {
+  "epoch": 877,
+  "vicreg-vmx-cifar10": 92.11000061,
+  "vicreg-cifar10": 90.45999908
+}, {
+  "epoch": 878,
+  "vicreg-vmx-cifar10": 92.26999664,
+  "vicreg-cifar10": 90.41999817
+}, {
+  "epoch": 879,
+  "vicreg-vmx-cifar10": 92.22000122,
+  "vicreg-cifar10": 90.63999939
+}, {
+  "epoch": 880,
+  "vicreg-vmx-cifar10": 91.94999695,
+  "vicreg-cifar10": 90.50999451
+}, {
+  "epoch": 881,
+  "vicreg-vmx-cifar10": 91.97000122,
+  "vicreg-cifar10": 90.52999878
+}, {
+  "epoch": 882,
+  "vicreg-vmx-cifar10": 91.95999908,
+  "vicreg-cifar10": 90.44999695
+}, {
+  "epoch": 883,
+  "vicreg-vmx-cifar10": 92.04000092,
+  "vicreg-cifar10": 90.63999939
+}, {
+  "epoch": 884,
+  "vicreg-vmx-cifar10": 92.19999695,
+  "vicreg-cifar10": 90.37999725
+}, {
+  "epoch": 885,
+  "vicreg-vmx-cifar10": 92.11999512,
+  "vicreg-cifar10": 90.55999756
+}, {
+  "epoch": 886,
+  "vicreg-vmx-cifar10": 92.18000031,
+  "vicreg-cifar10": 90.36999512
+}, {
+  "epoch": 887,
+  "vicreg-vmx-cifar10": 92.04000092,
+  "vicreg-cifar10": 90.43000031
+}, {
+  "epoch": 888,
+  "vicreg-vmx-cifar10": 92.26999664,
+  "vicreg-cifar10": 90.5799942
+}, {
+  "epoch": 889,
+  "vicreg-vmx-cifar10": 92.25999451,
+  "vicreg-cifar10": 90.40999603
+}, {
+  "epoch": 890,
+  "vicreg-vmx-cifar10": 92.30999756,
+  "vicreg-cifar10": 90.38999939
+}, {
+  "epoch": 891,
+  "vicreg-vmx-cifar10": 92.23999786,
+  "vicreg-cifar10": 90.30999756
+}, {
+  "epoch": 892,
+  "vicreg-vmx-cifar10": 92.18999481,
+  "vicreg-cifar10": 90.36000061
+}, {
+  "epoch": 893,
+  "vicreg-vmx-cifar10": 92.25,
+  "vicreg-cifar10": 90.45999908
+}, {
+  "epoch": 894,
+  "vicreg-vmx-cifar10": 92.06999969,
+  "vicreg-cifar10": 90.56999969
+}, {
+  "epoch": 895,
+  "vicreg-vmx-cifar10": 92.26999664,
+  "vicreg-cifar10": 90.15999603
+}, {
+  "epoch": 896,
+  "vicreg-vmx-cifar10": 92.0799942,
+  "vicreg-cifar10": 90.6499939
+}, {
+  "epoch": 897,
+  "vicreg-vmx-cifar10": 92.1499939,
+  "vicreg-cifar10": 90.52999878
+}, {
+  "epoch": 898,
+  "vicreg-vmx-cifar10": 92.00999451,
+  "vicreg-cifar10": 90.48999786
+}, {
+  "epoch": 899,
+  "vicreg-vmx-cifar10": 92.05999756,
+  "vicreg-cifar10": 90.5
+}, {
+  "epoch": 900,
+  "vicreg-vmx-cifar10": 92.11999512,
+  "vicreg-cifar10": 90.68000031
+}, {
+  "epoch": 901,
+  "vicreg-vmx-cifar10": 91.97000122,
+  "vicreg-cifar10": 90.43000031
+}, {
+  "epoch": 902,
+  "vicreg-vmx-cifar10": 92.23999786,
+  "vicreg-cifar10": 90.6499939
+}, {
+  "epoch": 903,
+  "vicreg-vmx-cifar10": 92.02999878,
+  "vicreg-cifar10": 90.55999756
+}, {
+  "epoch": 904,
+  "vicreg-vmx-cifar10": 92.26999664,
+  "vicreg-cifar10": 90.55999756
+}, {
+  "epoch": 905,
+  "vicreg-vmx-cifar10": 92.43000031,
+  "vicreg-cifar10": 90.26999664
+}, {
+  "epoch": 906,
+  "vicreg-vmx-cifar10": 92.13999939,
+  "vicreg-cifar10": 90.55999756
+}, {
+  "epoch": 907,
+  "vicreg-vmx-cifar10": 92.20999908,
+  "vicreg-cifar10": 90.38999939
+}, {
+  "epoch": 908,
+  "vicreg-vmx-cifar10": 92.31999969,
+  "vicreg-cifar10": 90.37999725
+}, {
+  "epoch": 909,
+  "vicreg-vmx-cifar10": 92.30999756,
+  "vicreg-cifar10": 90.43000031
+}, {
+  "epoch": 910,
+  "vicreg-vmx-cifar10": 92.37999725,
+  "vicreg-cifar10": 90.54999542
+}, {
+  "epoch": 911,
+  "vicreg-vmx-cifar10": 92.08999634,
+  "vicreg-cifar10": 90.55999756
+}, {
+  "epoch": 912,
+  "vicreg-vmx-cifar10": 92.37999725,
+  "vicreg-cifar10": 90.73999786
+}, {
+  "epoch": 913,
+  "vicreg-vmx-cifar10": 92.11000061,
+  "vicreg-cifar10": 90.77999878
+}, {
+  "epoch": 914,
+  "vicreg-vmx-cifar10": 92.06999969,
+  "vicreg-cifar10": 90.40000153
+}, {
+  "epoch": 915,
+  "vicreg-vmx-cifar10": 92.22999573,
+  "vicreg-cifar10": 90.72000122
+}, {
+  "epoch": 916,
+  "vicreg-vmx-cifar10": 92.00999451,
+  "vicreg-cifar10": 90.61000061
+}, {
+  "epoch": 917,
+  "vicreg-vmx-cifar10": 92.18000031,
+  "vicreg-cifar10": 90.55999756
+}, {
+  "epoch": 918,
+  "vicreg-vmx-cifar10": 92.0799942,
+  "vicreg-cifar10": 90.56999969
+}, {
+  "epoch": 919,
+  "vicreg-vmx-cifar10": 92.18999481,
+  "vicreg-cifar10": 90.68999481
+}, {
+  "epoch": 920,
+  "vicreg-vmx-cifar10": 92.05999756,
+  "vicreg-cifar10": 90.72000122
+}, {
+  "epoch": 921,
+  "vicreg-vmx-cifar10": 92.18000031,
+  "vicreg-cifar10": 90.58999634
+}, {
+  "epoch": 922,
+  "vicreg-vmx-cifar10": 92.36000061,
+  "vicreg-cifar10": 90.47000122
+}, {
+  "epoch": 923,
+  "vicreg-vmx-cifar10": 92.11999512,
+  "vicreg-cifar10": 90.30999756
+}, {
+  "epoch": 924,
+  "vicreg-vmx-cifar10": 92.22000122,
+  "vicreg-cifar10": 90.45999908
+}, {
+  "epoch": 925,
+  "vicreg-vmx-cifar10": 92.33999634,
+  "vicreg-cifar10": 90.44999695
+}, {
+  "epoch": 926,
+  "vicreg-vmx-cifar10": 92.16999817,
+  "vicreg-cifar10": 90.66999817
+}, {
+  "epoch": 927,
+  "vicreg-vmx-cifar10": 92.15999603,
+  "vicreg-cifar10": 90.56999969
+}, {
+  "epoch": 928,
+  "vicreg-vmx-cifar10": 92.23999786,
+  "vicreg-cifar10": 90.54999542
+}, {
+  "epoch": 929,
+  "vicreg-vmx-cifar10": 92.34999847,
+  "vicreg-cifar10": 90.40999603
+}, {
+  "epoch": 930,
+  "vicreg-vmx-cifar10": 92.29000092,
+  "vicreg-cifar10": 90.38999939
+}, {
+  "epoch": 931,
+  "vicreg-vmx-cifar10": 92.29999542,
+  "vicreg-cifar10": 90.43999481
+}, {
+  "epoch": 932,
+  "vicreg-vmx-cifar10": 92.27999878,
+  "vicreg-cifar10": 90.62999725
+}, {
+  "epoch": 933,
+  "vicreg-vmx-cifar10": 92.19999695,
+  "vicreg-cifar10": 90.52999878
+}, {
+  "epoch": 934,
+  "vicreg-vmx-cifar10": 92.20999908,
+  "vicreg-cifar10": 90.3299942
+}, {
+  "epoch": 935,
+  "vicreg-vmx-cifar10": 92.3299942,
+  "vicreg-cifar10": 90.43999481
+}, {
+  "epoch": 936,
+  "vicreg-vmx-cifar10": 92.13999939,
+  "vicreg-cifar10": 90.43999481
+}, {
+  "epoch": 937,
+  "vicreg-vmx-cifar10": 92.05999756,
+  "vicreg-cifar10": 90.47000122
+}, {
+  "epoch": 938,
+  "vicreg-vmx-cifar10": 92.11999512,
+  "vicreg-cifar10": 90.41999817
+}, {
+  "epoch": 939,
+  "vicreg-vmx-cifar10": 92.27999878,
+  "vicreg-cifar10": 90.48999786
+}, {
+  "epoch": 940,
+  "vicreg-vmx-cifar10": 92.29999542,
+  "vicreg-cifar10": 90.56999969
+}, {
+  "epoch": 941,
+  "vicreg-vmx-cifar10": 92.30999756,
+  "vicreg-cifar10": 90.40000153
+}, {
+  "epoch": 942,
+  "vicreg-vmx-cifar10": 92.18000031,
+  "vicreg-cifar10": 90.50999451
+}, {
+  "epoch": 943,
+  "vicreg-vmx-cifar10": 92.08999634,
+  "vicreg-cifar10": 90.61999512
+}, {
+  "epoch": 944,
+  "vicreg-vmx-cifar10": 92.08999634,
+  "vicreg-cifar10": 90.61999512
+}, {
+  "epoch": 945,
+  "vicreg-vmx-cifar10": 92.22000122,
+  "vicreg-cifar10": 90.58999634
+}, {
+  "epoch": 946,
+  "vicreg-vmx-cifar10": 92.30999756,
+  "vicreg-cifar10": 90.5
+}, {
+  "epoch": 947,
+  "vicreg-vmx-cifar10": 92.15999603,
+  "vicreg-cifar10": 90.68000031
+}, {
+  "epoch": 948,
+  "vicreg-vmx-cifar10": 92.0799942,
+  "vicreg-cifar10": 90.62999725
+}, {
+  "epoch": 949,
+  "vicreg-vmx-cifar10": 92.04999542,
+  "vicreg-cifar10": 90.65999603
+}, {
+  "epoch": 950,
+  "vicreg-vmx-cifar10": 92.05999756,
+  "vicreg-cifar10": 90.68000031
+}, {
+  "epoch": 951,
+  "vicreg-vmx-cifar10": 92.16999817,
+  "vicreg-cifar10": 90.63999939
+}, {
+  "epoch": 952,
+  "vicreg-vmx-cifar10": 92.20999908,
+  "vicreg-cifar10": 90.5799942
+}, {
+  "epoch": 953,
+  "vicreg-vmx-cifar10": 92.05999756,
+  "vicreg-cifar10": 90.51999664
+}, {
+  "epoch": 954,
+  "vicreg-vmx-cifar10": 92.18999481,
+  "vicreg-cifar10": 90.50999451
+}, {
+  "epoch": 955,
+  "vicreg-vmx-cifar10": 92.15999603,
+  "vicreg-cifar10": 90.61000061
+}, {
+  "epoch": 956,
+  "vicreg-vmx-cifar10": 92.11000061,
+  "vicreg-cifar10": 90.61000061
+}, {
+  "epoch": 957,
+  "vicreg-vmx-cifar10": 92.12999725,
+  "vicreg-cifar10": 90.59999847
+}, {
+  "epoch": 958,
+  "vicreg-vmx-cifar10": 92.13999939,
+  "vicreg-cifar10": 90.43000031
+}, {
+  "epoch": 959,
+  "vicreg-vmx-cifar10": 92.18999481,
+  "vicreg-cifar10": 90.50999451
+}, {
+  "epoch": 960,
+  "vicreg-vmx-cifar10": 92.08999634,
+  "vicreg-cifar10": 90.5799942
+}, {
+  "epoch": 961,
+  "vicreg-vmx-cifar10": 92.16999817,
+  "vicreg-cifar10": 90.62999725
+}, {
+  "epoch": 962,
+  "vicreg-vmx-cifar10": 92.19999695,
+  "vicreg-cifar10": 90.54000092
+}, {
+  "epoch": 963,
+  "vicreg-vmx-cifar10": 92.1499939,
+  "vicreg-cifar10": 90.40000153
+}, {
+  "epoch": 964,
+  "vicreg-vmx-cifar10": 92.19999695,
+  "vicreg-cifar10": 90.55999756
+}, {
+  "epoch": 965,
+  "vicreg-vmx-cifar10": 92.20999908,
+  "vicreg-cifar10": 90.54999542
+}, {
+  "epoch": 966,
+  "vicreg-vmx-cifar10": 92.13999939,
+  "vicreg-cifar10": 90.55999756
+}, {
+  "epoch": 967,
+  "vicreg-vmx-cifar10": 92.22000122,
+  "vicreg-cifar10": 90.52999878
+}, {
+  "epoch": 968,
+  "vicreg-vmx-cifar10": 92.25,
+  "vicreg-cifar10": 90.65999603
+}, {
+  "epoch": 969,
+  "vicreg-vmx-cifar10": 92.13999939,
+  "vicreg-cifar10": 90.68999481
+}, {
+  "epoch": 970,
+  "vicreg-vmx-cifar10": 92.22999573,
+  "vicreg-cifar10": 90.5799942
+}, {
+  "epoch": 971,
+  "vicreg-vmx-cifar10": 92.34999847,
+  "vicreg-cifar10": 90.61000061
+}, {
+  "epoch": 972,
+  "vicreg-vmx-cifar10": 92.18000031,
+  "vicreg-cifar10": 90.66999817
+}, {
+  "epoch": 973,
+  "vicreg-vmx-cifar10": 92.23999786,
+  "vicreg-cifar10": 90.54000092
+}, {
+  "epoch": 974,
+  "vicreg-vmx-cifar10": 92.22000122,
+  "vicreg-cifar10": 90.59999847
+}, {
+  "epoch": 975,
+  "vicreg-vmx-cifar10": 92.22000122,
+  "vicreg-cifar10": 90.62999725
+}, {
+  "epoch": 976,
+  "vicreg-vmx-cifar10": 92.27999878,
+  "vicreg-cifar10": 90.54999542
+}, {
+  "epoch": 977,
+  "vicreg-vmx-cifar10": 92.29000092,
+  "vicreg-cifar10": 90.48999786
+}, {
+  "epoch": 978,
+  "vicreg-vmx-cifar10": 92.25,
+  "vicreg-cifar10": 90.58999634
+}, {
+  "epoch": 979,
+  "vicreg-vmx-cifar10": 92.26999664,
+  "vicreg-cifar10": 90.56999969
+}, {
+  "epoch": 980,
+  "vicreg-vmx-cifar10": 92.25999451,
+  "vicreg-cifar10": 90.5799942
+}, {
+  "epoch": 981,
+  "vicreg-vmx-cifar10": 92.25,
+  "vicreg-cifar10": 90.54000092
+}, {
+  "epoch": 982,
+  "vicreg-vmx-cifar10": 92.22000122,
+  "vicreg-cifar10": 90.54999542
+}, {
+  "epoch": 983,
+  "vicreg-vmx-cifar10": 92.18000031,
+  "vicreg-cifar10": 90.65999603
+}, {
+  "epoch": 984,
+  "vicreg-vmx-cifar10": 92.18000031,
+  "vicreg-cifar10": 90.62999725
+}, {
+  "epoch": 985,
+  "vicreg-vmx-cifar10": 92.29999542,
+  "vicreg-cifar10": 90.68000031
+}, {
+  "epoch": 986,
+  "vicreg-vmx-cifar10": 92.25999451,
+  "vicreg-cifar10": 90.54000092
+}, {
+  "epoch": 987,
+  "vicreg-vmx-cifar10": 92.25,
+  "vicreg-cifar10": 90.63999939
+}, {
+  "epoch": 988,
+  "vicreg-vmx-cifar10": 92.20999908,
+  "vicreg-cifar10": 90.5799942
+}, {
+  "epoch": 989,
+  "vicreg-vmx-cifar10": 92.22999573,
+  "vicreg-cifar10": 90.69999695
+}, {
+  "epoch": 990,
+  "vicreg-vmx-cifar10": 92.22999573,
+  "vicreg-cifar10": 90.59999847
+}, {
+  "epoch": 991,
+  "vicreg-vmx-cifar10": 92.25,
+  "vicreg-cifar10": 90.66999817
+}, {
+  "epoch": 992,
+  "vicreg-vmx-cifar10": 92.25,
+  "vicreg-cifar10": 90.54999542
+}, {
+  "epoch": 993,
+  "vicreg-vmx-cifar10": 92.22000122,
+  "vicreg-cifar10": 90.5799942
+}, {
+  "epoch": 994,
+  "vicreg-vmx-cifar10": 92.31999969,
+  "vicreg-cifar10": 90.65999603
+}, {
+  "epoch": 995,
+  "vicreg-vmx-cifar10": 92.31999969,
+  "vicreg-cifar10": 90.47999573
+}, {
+  "epoch": 996,
+  "vicreg-vmx-cifar10": 92.33999634,
+  "vicreg-cifar10": 90.5799942
+}, {
+  "epoch": 997,
+  "vicreg-vmx-cifar10": 92.27999878,
+  "vicreg-cifar10": 90.58999634
+}, {
+  "epoch": 998,
+  "vicreg-vmx-cifar10": 92.22000122,
+  "vicreg-cifar10": 90.6499939
+}, {
+  "epoch": 999,
+  "vicreg-vmx-cifar10": 92.25999451,
+  "vicreg-cifar10": 90.51999664
+}];
+
+var CustomToolTip = function CustomToolTip(_ref) {
+  var active = _ref.active,
+      payload = _ref.payload,
+      label = _ref.label;
+
+  if (active) {
+    var accuracy = 0;
+    var id = '';
+    if (payload && payload[0] && payload[0].payload) {
+      console.log(payload[0].payload);
+      accuracy = payload[0].payload['vicreg-cifar10'] || 0;
+      accuracy2 = payload[0].payload['vicreg-vmx-cifar10'] || 0;
+      id = payload[0].payload.id || '';
+    }
+    return React.createElement(
+      'div',
+      { className: 'tooltip', style: { backgroundColor: toneMid, border: '0.5px solid ' + toneLighter, minWidth: '250px' } },
+      React.createElement(
+        'strong',
+        { style: { color: { mainColor: mainColor }, fontSize: '10px', lineHeight: 2 } },
+        'VICReg Training Epoch: \xA0',
+        React.createElement(
+          'span',
+          { style: { textDecoration: 'underline' }
+          },
+          label
+        ),
+        React.createElement('br', null),
+        'Online Linear Evaluation Accuracy:',
+        React.createElement('br', null),
+        'VICReg Baseline: \xA0',
+        React.createElement(
+          'span',
+          { style: { color: '#ff8f91', float: 'right' } },
+          Number(accuracy).toFixed(2),
+          '%'
+        ),
+        React.createElement('br', null),
+        React.createElement(
+          'span',
+          { style: { textDecoration: 'underline' } },
+          'VICReg Baseline + Our Augmentation:'
+        ),
+        ' \xA0',
+        React.createElement(
+          'span',
+          { style: { color: '#48b2a6', float: 'right' } },
+          Number(accuracy2).toFixed(2),
+          '%'
+        )
+      ),
+      React.createElement('br', null)
+    );
+  }
+  return null;
+};
+
+var renderLegendText = function renderLegendText(value, entry) {
+  var color = entry.color;
+
+  return React.createElement(
+    'span',
+    { style: { color: color } },
+    'Online Accuracy: ',
+    value
+  );
+};
+
+var SSRL_CHART = function SSRL_CHART(props) {
+  return React.createElement(
+    'div',
+    { className: 'Chart-Container' },
+    React.createElement(
+      'div',
+      { className: 'Chart-Label' },
+      React.createElement(
+        'strong',
+        { style: { color: 'orange' } },
+        'Hover mouse'
+      ),
+      ' for ',
+      React.createElement(
+        'strong',
+        { style: { color: 'orange' } },
+        'CIFAR10 Top 1'
+      ),
+      ' Accuracy of VICReg Baseline, VICReg + Our Augmentation'
+    ),
+    React.createElement('br', null),
+    React.createElement(
+      Recharts.ResponsiveContainer,
+      { width: '100%', height: '100%' },
+      React.createElement(
+        Recharts.LineChart,
+        {
+          data: data,
+          margin: {
+            top: 0,
+            right: 10,
+            left: 0,
+            bottom: 5
+          }
+        },
+        React.createElement(Recharts.CartesianGrid, {
+          strokeDasharray: '2 2',
+          stroke: 'rgba(70, 70, 70, 1)'
+        }),
+        React.createElement(Recharts.XAxis, {
+          // dataKey="epoch" 
+          label: {
+            value: 'Pre-training Epochs',
+            fill: 'white',
+            position: 'insideBottom',
+            offset: 1,
+            fontSize: 10
+          },
+          tickCount: 8
+        }),
+        React.createElement(Recharts.YAxis, {
+          type: 'number',
+          domain: ['auto', 'auto'],
+          label: {
+            value: 'Top-1 Online Linear Evaluation Accuracy (%)',
+            fill: 'white',
+            offset: 1,
+            angle: -90,
+            fontSize: 10
+          },
+          tickCount: 9
+        }),
+        React.createElement(Recharts.Tooltip, {
+          cursor: {
+            fill: toneMid,
+            stroke: toneLighter,
+            strokeWidth: 0.5
+          },
+          contentStyle: {
+            backgroundColor: toneMid,
+            border: '0.5px solid ' + toneLighter,
+            textTransform: 'capitalize',
+            borderRadius: '5px',
+            zIndex: 999
+          },
+          isAnimationActive: false,
+          content: React.createElement(CustomToolTip, null)
+        }),
+        React.createElement(Recharts.Legend, {
+          align: 'right',
+          verticalAlign: 'bottom',
+          wrapperStyle: {
+            bottom: 75
+          },
+          formatter: renderLegendText
+        }),
+        React.createElement(Recharts.Line, { type: 'monotone', dataKey: 'vicreg-cifar10', stroke: '#ff8f91', activeDot: { r: 8 }, dot: false,
+          name: 'VICReg Baseline'
+        }),
+        React.createElement(Recharts.Line, { type: 'monotone', dataKey: 'vicreg-vmx-cifar10', stroke: '#48b2a6', activeDot: { r: 8 }, dot: false,
+          name: 'VICReg Baseline with Our Augmentation'
+        })
+      )
+    )
+  );
+};
+
+var domContainer = document.querySelector('#ssrl_chart_container');
+ReactDOM.render(React.createElement(SSRL_CHART, null), domContainer);

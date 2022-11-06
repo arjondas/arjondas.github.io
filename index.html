@@ -4,7 +4,7 @@
     <meta charset='utf-8'/>
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <meta name='theme-color' content='#000000' />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='styles.css'>
     <link rel='stylesheet' href='charts.css'>
     <title>Arjon Das</title>
@@ -26,23 +26,26 @@
             <h1>Arjon Das</h1>
             <p style="margin-bottom: 0; margin-left: 20px;">
               <a href='mailto:arjondas@gmail.com'>Email</a>
-              <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-              <a href='docs/arjon_das_resume.pdf'>Resume</a>
+              <!-- <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+              <a href='docs/arjon_das_cv.pdf'>CV</a> -->
               <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
               <a href='https://github.com/arjondas'>Github</a>
               <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-              <a href='https://www.linkedin.com/in/arjondas/'>LinkedIn</a>
-              <!-- <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-              <a href='https://twitter.com/arjondas'>Twitter</a> -->
+              <a href='https://twitter.com/arjondas'>Twitter</a>
             </p>
           </div>
           <div class='ProfileDoc'>
             <p>
-              I am currently pursuing Master's degree in Computer Science at the University of Nebraska at Omaha and working as a Graduate Research Assistant at the <a href="https://sites.google.com/view/rna-uno/">RNA Lab</a> under <a href="">Dr. Xin Zhong</a>.
-              I completed my Bachelor's in Computer Science and Engineering at the 
-              Chittagong University of Engineering and Technology
+              I am a freelance programmer and Deep-learning practitioner.
+              I completed my bachelor's in Computer Science and Engineering at the 
+              Chittagong University of Engineering and Technology. There I worked 
               on IoT Based Smart Food Monitoring System under the supervision of 
               <a href='https://scholar.google.com/citations?user=srYxYhcAAAAJ&hl=en&oi=ao' target='_blank'>Dr. M. Moshiul Hoque</a>.<br/><br/>
+              I am pursuing my MS in Computer Science with AI Concentration at the
+              University of Nebraska at Omaha. I'm a Graduate Research Assistant at UNO's RNA Lab
+              under the supervision of 
+              <a href='https://sites.google.com/view/xin-zhong' target='_blank'>Dr. Xin Zhong</a>.
+              I do Computer Vision research, specializing on Self-Supervised Representation Learning.
             </p>
           </div>
         </div>
@@ -55,18 +58,37 @@
         </div>
         
         <div class='proj-card'>
+          <div class='proj-pic'
+            style='display: flex; justify-content: center; align-items: center; border: 1px solid rgba(0, 0, 0, 0.5); border-radius: 5px; height: 110px;'
+          >
+            <code style="width: 100%; text-align: center;">Self-Supervised Representation Learning</code>
+          </div>
+          <div class='proj-doc'>
+            <h3>Title Hidden: Work Under Review &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'><br/>PyTorch&nbsp;</span></h3>
+            <p>
+              Proposed a new augmentation which applied with different <span style="color: orange">Joint Embedding Architectures</span>, resulting in higher linear evaluation accuracy along with <span style="color: orange">Distortion Robustness</span> on previously unseen augmentations.
+              Below chart shows the comparison of VICReg Baseline and VICReg with our proposed augmentation.
+            </p>
+            <div>
+              <a href=''>Paper Coming Soon</a>
+            </div>
+          </div>
+          <div class='proj-extra'>
+            <div id="ssrl_chart_container"></div>
+          </div>
+        </div>
+
+        <div class='proj-card'>
           <img
             class='proj-pic'
             src='images/aiwm_icon.svg'
           >
           <div class='proj-doc'>
-            <h3>Deep Learning-based Audio in Image Watermarking Scheme&nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>Tensorflow&nbsp;</span></h3>
+            <h3>Deep Learning-based Audio in Image Watermarking (Deep AIWM) &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'><br/>Tensorflow&nbsp;</span></h3>
             <p>
-              A Deep Learning scheme that can learn to embed audio data inside RGB image without degrading the quality and extract the audio data from the marked image. Additionally, the scheme's Similarity Network is able to distinguish noisy extracted audio from the marked image which can be used for verification of the extracted watermark.
+              Deep AIWM is a Deep Learning model that can embed audio data inside RGB image without degrading the quality and extract the audio data from the marked image. The model's Siamese Network is able to distinguish noisy extracted audio from the marked image which can be used for speech command recognition simply by scanning image.
             </p>
             <div>
-              <a href='https://arxiv.org/abs/2110.02436' target="_blank">Publication Link</a>
-              <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
               <a href=''>Code Coming Soon</a>
             </div>
           </div>
@@ -74,24 +96,7 @@
             <div id="awm_chart_container"></div>
           </div>
         </div>
-        <div class='proj-card'>
-          <img
-            class='proj-pic'
-            src='images/sfms.png'
-            style="background-color: white;"
-          >
-          <div class='proj-doc'>
-            <h3>IoT Based Smart Food Monitoring System &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'><br/>Raspberry Pi&nbsp; | &nbsp;GPIO&nbsp; | &nbsp;Swift&nbsp; | &nbsp;Python&nbsp; | &nbsp;MongoDB&nbsp; | &nbsp;Express&nbsp; | &nbsp;Node.js</span></h3>
-            <p>
-              The project facilitates food monitoring of refrigerators and food cold storage systems using mobile devices, with high scalability. The system is developed using Raspberry Pi device and transformed into a small form factor IoT device. One of the pros is it's ability to scale up which can facilitate large scale cold storage monitoring.
-            </p>
-            <div>
-              <a href='docs/IoT_Based_Smart_Food_Monitoring_System Final.pdf'>Thesis</a>
-              <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-              <a href='https://github.com/arjondas/sfms'>Code</a>
-            </div>
-          </div>
-        </div>
+
         <div class='proj-card'>
           <img
             class='proj-pic'
@@ -127,9 +132,10 @@
           </div>
         </div>
         <div class='proj-card'>
-          <div class='meme'>
-            Hateful Meme Detection
-          </div>
+          <img
+            class='proj-pic'
+            src='images/meme_pic.png'
+          >
           <div class='proj-doc'>
             <h3>Facebook Hateful Meme Challenge &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'>PyTorch &nbsp; | &nbsp;MMF</span></h3>
             <p>
@@ -167,6 +173,24 @@
             </p>
             <div>
               <a href='https://stckscrpr.herokuapp.com'>Project Website</a>
+            </div>
+          </div>
+        </div>
+        <div class='proj-card'>
+          <img
+            class='proj-pic'
+            src='images/sfms.png'
+            style="background-color: white;"
+          >
+          <div class='proj-doc'>
+            <h3>IoT Based Smart Food Monitoring System &nbsp;&nbsp;<span style='font-weight: 400; font-size: 10px'><br/>Raspberry Pi&nbsp; | &nbsp;Swift&nbsp; | &nbsp;Python&nbsp; | &nbsp;MongoDB&nbsp; | &nbsp;Express&nbsp; | &nbsp;Node.js</span></h3>
+            <p>
+              The project facilitates food monitoring of refrigerators and food cold storage systems using mobile devices, with high scalability. The system is developed using Raspberry Pi device and transformed into a small form factor IoT device. One of the pros is it's ability to scale up which can facilitate large scale cold storage monitoring.
+            </p>
+            <div>
+              <a href='docs/IoT_Based_Smart_Food_Monitoring_System Final.pdf'>Thesis</a>
+              <span style='font-size: 13.5px'>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+              <a href='https://github.com/arjondas/sfms'>Code</a>
             </div>
           </div>
         </div>
@@ -240,6 +264,7 @@
     <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
     <script src="https://unpkg.com/recharts@2.0.7/umd/Recharts.min.js" crossorigin></script>
     <script src="awm_chart.js"></script>
+    <script src="ssrl_chart.js"></script>
     <!-- Importing React & Stuff -->
   </body>
 </html>
